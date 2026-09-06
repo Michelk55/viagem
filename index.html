@@ -11,30 +11,36 @@
 <title>Tailândia + Japão</title>
 <style>
 :root{
-  --bg:#F2F2F7;--card:#FFF;--card2:#FFF;--fill:#78788014;--fill2:#7878801F;--fill3:#78788033;
-  --sep:#3C3C4326;--sep2:#3C3C4340;
-  --label:#000;--label2:#3C3C43A6;--label3:#3C3C434D;
-  --th:#0E8A8F;--jp:#C2385C;--tr:#6E7480;
-  --hot:#D9622B;--cold:#3C7DD9;
-  --ok:#1E8E4E;--okbg:#34C75919;--neu:#4A5568;--neubg:#78788019;
-  --hdr:#F2F2F7D9;--r:16px;
+  --bg:#E9EFF6;--card:#FFF;--card2:#F4F8FC;--fill:#16334F0F;--fill2:#16334F1A;--fill3:#16334F2B;
+  --sep:#16334F1F;--sep2:#16334F33;
+  --label:#0A1A2B;--label2:#4B5F76;--label3:#8898AB;
+  --th:#0D7B85;--jp:#AF4560;--tr:#5C7085;
+  --navy:#16334F;--gold:#A07C36;--map:#16334F;
+  --hot:#C05F2A;--cold:#37699F;
+  --ok:#187553;--okbg:#18755314;--neu:#2F4A66;--neubg:#16334F14;
+  --hdr:#E9EFF6D9;--r:16px;--glow:#4E7FB214;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#000;--card:#1C1C1E;--card2:#2C2C2E;--fill:#7878801F;--fill2:#7878802E;--fill3:#78788047;
-  --sep:#54545866;--sep2:#54545899;
-  --label:#FFF;--label2:#EBEBF599;--label3:#EBEBF54D;
-  --th:#4FD5DB;--jp:#FF7A9C;--tr:#98A0AD;
-  --hot:#FF9F5A;--cold:#6FB0FF;
-  --ok:#32D74B;--okbg:#32D74B24;--neu:#AEB6C2;--neubg:#7878802E;--hdr:#000000D9;
+  --bg:#060D17;--card:#0D1826;--card2:#15243A;--fill:#8FB4E014;--fill2:#8FB4E022;--fill3:#8FB4E038;
+  --sep:#8FB4E024;--sep2:#8FB4E03D;
+  --label:#E9F0F9;--label2:#93A8C2;--label3:#61788F;
+  --th:#3FD2CE;--jp:#FF8399;--tr:#7E94AD;
+  --navy:#7FA8D8;--gold:#E0B95E;--map:#7FA8D8;
+  --hot:#FF9B57;--cold:#6DAEFF;
+  --ok:#3ED88E;--okbg:#3ED88E1F;--neu:#9FB8D6;--neubg:#8FB4E01A;
+  --hdr:#060D17D9;--glow:#2E5C8F26;
 }}
-html[data-t=light]{--bg:#F2F2F7;--card:#FFF;--card2:#FFF;--fill:#78788014;--fill2:#7878801F;--fill3:#78788033;--sep:#3C3C4326;--sep2:#3C3C4340;--label:#000;--label2:#3C3C43A6;--label3:#3C3C434D;--th:#0E8A8F;--jp:#C2385C;--tr:#6E7480;--hot:#D9622B;--cold:#3C7DD9;--ok:#1E8E4E;--okbg:#34C75919;--neu:#4A5568;--neubg:#78788019;--hdr:#F2F2F7D9}
-html[data-t=dark]{--bg:#000;--card:#1C1C1E;--card2:#2C2C2E;--fill:#7878801F;--fill2:#7878802E;--fill3:#78788047;--sep:#54545866;--sep2:#54545899;--label:#FFF;--label2:#EBEBF599;--label3:#EBEBF54D;--th:#4FD5DB;--jp:#FF7A9C;--tr:#98A0AD;--hot:#FF9F5A;--cold:#6FB0FF;--ok:#32D74B;--okbg:#32D74B24;--neu:#AEB6C2;--neubg:#7878802E;--hdr:#000000D9}
+html[data-t=light]{--bg:#E9EFF6;--card:#FFF;--card2:#F4F8FC;--fill:#16334F0F;--fill2:#16334F1A;--fill3:#16334F2B;--sep:#16334F1F;--sep2:#16334F33;--label:#0A1A2B;--label2:#4B5F76;--label3:#8898AB;--th:#0D7B85;--jp:#AF4560;--tr:#5C7085;--navy:#16334F;--gold:#A07C36;--map:#16334F;--hot:#C05F2A;--cold:#37699F;--ok:#187553;--okbg:#18755314;--neu:#2F4A66;--neubg:#16334F14;--hdr:#E9EFF6D9;--glow:#4E7FB214}
+html[data-t=dark]{--bg:#060D17;--card:#0D1826;--card2:#15243A;--fill:#8FB4E014;--fill2:#8FB4E022;--fill3:#8FB4E038;--sep:#8FB4E024;--sep2:#8FB4E03D;--label:#E9F0F9;--label2:#93A8C2;--label3:#61788F;--th:#3FD2CE;--jp:#FF8399;--tr:#7E94AD;--navy:#7FA8D8;--gold:#E0B95E;--map:#7FA8D8;--hot:#FF9B57;--cold:#6DAEFF;--ok:#3ED88E;--okbg:#3ED88E1F;--neu:#9FB8D6;--neubg:#8FB4E01A;--hdr:#060D17D9;--glow:#2E5C8F26}
 
 *,*::before,*::after{box-sizing:border-box;min-width:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--label);font-size:17px;line-height:1.47;letter-spacing:-.01em;
  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Roboto,sans-serif;
  overflow-wrap:break-word;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+ background:radial-gradient(120% 60% at 50% -10%,var(--glow),transparent 70%)}
+.wrap,.hdr{position:relative;z-index:1}
 .mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums;letter-spacing:0}
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
 .hide{display:none!important}
@@ -208,6 +214,36 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 @keyframes fi{to{opacity:1}}
 .leg2{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:var(--label2)}
 .leg2 i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.cty{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:16px}
+@media(min-width:520px){.cty{grid-template-columns:repeat(4,1fr)}}
+.cx{background:var(--fill);border-radius:12px;padding:11px;display:flex;align-items:flex-start;gap:8px}
+.cx i{width:8px;height:8px;border-radius:50%;flex:none;margin-top:7px}
+.cx b{font-size:19px;font-weight:680;letter-spacing:-.03em;line-height:1.1}
+.cx span{font-size:12px;color:var(--label2);line-height:1.3;display:block;margin-left:2px}
+.cx em{display:block;font-style:normal;font-size:10.5px;color:var(--label3);margin-top:1px}
+.cx>span{flex:1}
+
+/* mapa */
+.mapwrap{margin:-2px -6px 2px}
+.land{fill:var(--map);opacity:.13}
+.grid{stroke:var(--map);opacity:.08;stroke-width:.8}
+.leg3{stroke:var(--fill3);stroke-width:2.4;fill:none;stroke-linecap:round}
+.legA{stroke:var(--gold);stroke-width:2.6;fill:none;stroke-linecap:round}
+.pin{fill:var(--card);stroke:var(--gold);stroke-width:2.6}
+.pinT{fill:var(--label);font-size:15px;font-weight:700;letter-spacing:.02em}
+.pinS{fill:var(--label3);font-size:11.5px;font-weight:500}
+.plane{fill:var(--gold)}
+@keyframes pl{0%,100%{opacity:.2}50%{opacity:.75}}
+.pulse{fill:var(--gold);animation:pl 2.8s ease-in-out infinite}
+
+/* emergência */
+#wa{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:56;
+ display:flex;align-items:center;gap:9px;padding:9px 16px 9px 11px;border-radius:100px;text-decoration:none;
+ background:#1FA855;color:#fff;font-size:13.5px;font-weight:600;letter-spacing:-.01em;line-height:1.2;
+ box-shadow:0 4px 18px rgba(0,0,0,.3);border:0;max-width:calc(100vw - 84px)}
+#wa svg{width:21px;height:21px;flex:none;fill:#fff}
+#wa b{display:block;font-size:10px;font-weight:700;letter-spacing:.07em;opacity:.85;text-transform:uppercase}
+#wa:active{background:#188C46}
 
 /* fab */
 #top{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:44px;height:44px;border-radius:50%;
@@ -336,25 +372,75 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
   <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">O que isso significa na mala:</b> vocês acordam no dia 29 em Bangkok com 31 °C e acordam no dia 30 em Osaka com 8 °C. Casaco de inverno de verdade tem que estar na bagagem desde São Paulo, e o teamLab Botanical do dia 30 é ao ar livre, à noite.</div>
  </div>
 
- <div class="grp">Dias realmente aproveitáveis</div>
+ <div class="grp">Quanto cada dia realmente vale</div>
  <div class="card rv">
-  <svg class="chart" viewBox="0 0 700 210" role="img" aria-label="Dias cheios e parciais por destino">
+  <svg class="chart" viewBox="0 0 700 236" role="img" aria-label="Valor de aproveitamento de cada dia da viagem">
    <g id="bars"></g>
   </svg>
   <div class="leg2">
-   <span><i style="background:var(--label)"></i>Dia cheio</span>
-   <span><i style="background:var(--fill3)"></i>Dia parcial, de chegada ou saída</span>
+   <span><i style="background:var(--th)"></i>Tailândia</span>
+   <span><i style="background:var(--jp)"></i>Japão</span>
+   <span><i style="background:var(--fill3)"></i>Parte do dia que o deslocamento come</span>
   </div>
-  <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">Seis dias cheios em quinze.</b> Tóquio tem só um, o dia 3. Foi assim que o roteiro ficou depois de descontar chegadas, saídas, o dia 1º de janeiro fechado no Japão e o dia 4, que acaba às 17:00.</div>
+  <div class="cty" id="cty"></div>
+  <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">9,75 dias aproveitáveis em 13 dias em terra.</b> Cada dia vale uma fração: cheio conta 1,00; Shabat conta 0,75, porque é mais leve mas ainda é dia; meio dia conta 0,50; e dia que sobra só uma ponta, como a chegada em Phuket ou a manhã de Bangkok antes do voo, conta 0,25. Os dias 22 de dezembro e 5 de janeiro ficam de fora da conta, porque são voo do começo ao fim.</div>
  </div>
 
- <div class="grp">A rota</div>
+ <div class="grp">A rota, no mapa</div>
+ <div class="card rv">
+  <div class="mapwrap">
+  <svg class="chart" viewBox="252 78 700 322" role="img" aria-label="Mapa-múndi com a rota da viagem e um avião percorrendo o trajeto">
+   <g class="grid">
+    <line x1="252" y1="152" x2="952" y2="152"/><line x1="252" y1="250" x2="952" y2="250"/><line x1="252" y1="348" x2="952" y2="348"/>
+    <line x1="335" y1="78" x2="335" y2="400"/><line x1="475" y1="78" x2="475" y2="400"/><line x1="615" y1="78" x2="615" y2="400"/><line x1="755" y1="78" x2="755" y2="400"/><line x1="895" y1="78" x2="895" y2="400"/>
+   </g>
+   <g class="land">
+    <path d="M300,224 L332,213 L347,233 L361,249 L379,269 L386,300 L379,331 L366,361 L347,391 L331,401 L318,391 L323,356 L311,320 L296,285 L289,250 Z"/>
+    <path d="M256,140 L300,120 L312,150 L296,181 L271,201 L251,214 L246,180 Z"/>
+    <path d="M456,156 L521,146 L581,151 L621,166 L631,201 L611,241 L591,281 L571,321 L546,346 L521,331 L506,291 L491,251 L471,211 Z"/>
+    <path d="M476,121 L531,106 L581,111 L611,121 L606,141 L571,151 L531,149 L491,141 Z"/>
+    <path d="M601,106 L701,91 L801,91 L881,106 L901,131 L881,161 L851,181 L821,191 L791,211 L771,231 L751,216 L721,191 L691,176 L651,161 L616,141 Z"/>
+    <path d="M826,291 L891,286 L921,301 L916,331 L881,346 L846,336 L821,311 Z"/>
+    <path d="M873,132 L884,124 L893,133 L889,146 L878,148 Z"/>
+    <path d="M754,236 L774,244 L768,262 L750,254 Z"/>
+   </g>
+
+   <path id="route" d="M371,315 Q505,150 654,180 Q717,166 780,212 Q779,222 773,227 Q779,222 780,212 Q828,136 876,154 L890,151 Q775,252 654,180 Q505,342 371,315" fill="none" stroke="none"/>
+   <path class="leg3" d="M371,315 Q505,150 654,180 Q717,166 780,212"/>
+   <path class="leg3" d="M780,212 Q779,222 773,227"/>
+   <path class="leg3" d="M773,227 Q828,136 876,154"/>
+   <path class="leg3" d="M876,154 L890,151"/>
+   <path class="leg3" d="M890,151 Q775,252 654,180 Q505,342 371,315"/>
+   <path class="legA dash" style="--L:1500" d="M371,315 Q505,150 654,180 Q717,166 780,212"/>
+
+   <circle class="pulse" cx="371" cy="315" r="9"/>
+   <g>
+    <circle class="pin" cx="371" cy="315" r="5.5"/><text class="pinT" x="371" y="341" text-anchor="middle">GRU</text><text class="pinS" x="371" y="356" text-anchor="middle">São Paulo</text>
+    <circle class="pin" cx="654" cy="180" r="5.5"/><text class="pinT" x="654" y="168" text-anchor="middle">DXB</text><text class="pinS" x="654" y="155" text-anchor="middle">Dubai</text>
+    <circle class="pin" cx="780" cy="212" r="5.5"/><text class="pinT" x="800" y="205" text-anchor="start">BKK</text><text class="pinS" x="800" y="219" text-anchor="start">Bangkok</text>
+    <circle class="pin" cx="773" cy="240" r="5.5"/><text class="pinT" x="762" y="248" text-anchor="end">HKT</text><text class="pinS" x="762" y="262" text-anchor="end">Phuket</text>
+    <circle class="pin" cx="876" cy="154" r="5.5"/><text class="pinT" x="866" y="140" text-anchor="end">KIX</text><text class="pinS" x="866" y="127" text-anchor="end">Osaka</text>
+    <circle class="pin" cx="900" cy="176" r="5.5"/><text class="pinT" x="912" y="182" text-anchor="start">NRT</text><text class="pinS" x="912" y="196" text-anchor="start">Tóquio</text>
+   </g>
+
+   <g class="plane">
+    <path d="M13,0 L-3,-6 L-1,-1 L-10,-1 L-13,-4 L-15,-4 L-13,0 L-15,4 L-13,4 L-10,1 L-1,1 L-3,6 Z"/>
+    <animateMotion dur="26s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+     <mpath href="#route"/>
+    </animateMotion>
+   </g>
+  </svg>
+  </div>
+  <div class="mt">Nove trechos, quatro fusos e uma volta completa pelo hemisfério. A linha dourada é a ida até Bangkok, que já está emitida. O avião leva 26 segundos para fazer o que vocês vão levar quinze dias.</div>
+ </div>
+
+ <div class="grp">A sequência</div>
  <div class="card rv">
   <svg class="chart" viewBox="0 0 700 132" role="img" aria-label="Sequência de aeroportos da viagem">
    <path class="dash" style="--L:1400" id="rp" d="" fill="none" stroke="var(--sep2)" stroke-width="2"/>
    <g id="nodes"></g>
   </svg>
-  <div class="mt" style="margin-top:6px">Nove trechos entre nove pontos. Os quatro em cinza escuro estão emitidos, os quatro claros ainda não foram comprados, e o trecho Osaka a Tóquio é de trem.</div>
+  <div class="mt" style="margin-top:6px">Os quatro pontos escuros são os trechos emitidos, os claros ainda não foram comprados, e o trecho Osaka a Tóquio é de trem.</div>
  </div>
 
  <div class="grp">Que horas são lá</div>
@@ -495,7 +581,7 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="it"><div class="tm mono">16:00</div><div class="bd"><div class="hd"><strong>Shibuya Sky</strong><span class="st buy">A comprar</span></div><span class="ds">Mirante aberto no topo do Shibuya Scramble Square. O ingresso é por data e faixa de horário, e a faixa do pôr do sol esgota primeiro.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm">Jantar</div><div class="bd"><div class="hd"><strong>Sushi</strong><span class="st tbd">A definir</span></div><span class="ds">Se for balcão de sushi bom, reservar com bastante antecedência.</span></div></div></div>
-<div class="note"><b>É o único dia 100% cheio em Tóquio.</b> O que for inegociável, coloca aqui.</div></div></details>
+<div class="note"><b>É o único dia que vale 1,00 em Tóquio.</b> O dia 1º é meia tarde, o dia 2 é Shabat e o dia 4 acaba às 17:00. O que for inegociável, coloca aqui.</div></div></details>
 
 <details class="d jp mv" data-day="2027-01-04"><summary><div class="dn"><b class="mono">04</b><span>SEG</span></div><div class="dm"><div class="dc">Tóquio para a volta<span class="tp">10°</span></div><div class="dt">teamLab Planets e voo à noite</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
@@ -691,6 +777,10 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="ft">Documento offline. Funciona sem conexão depois de aberto uma vez.</div>
 </div>
 
+<a id="wa" href="https://wa.me/5511998398069" target="_blank" rel="noopener" aria-label="Emergência: falar com o Ivan no WhatsApp">
+ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.02h-.01c-1.52 0-3.01-.41-4.31-1.18l-.31-.18-3.2.84.85-3.12-.2-.32a8.2 8.2 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.65-1.23-1.46-1.38-1.71-.14-.24-.01-.37.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.24-.85.84-.85 2.04s.87 2.37.99 2.53c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+ <span><b>Emergência</b>Ligar para o Ivan</span>
+</a>
 <button id="top" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
@@ -777,19 +867,35 @@ ax+='<text x="216" y="262" font-size="10.5" text-anchor="middle" fill="var(--lab
 ax+='<text x="590" y="262" font-size="10.5" text-anchor="middle" fill="var(--label3)">JANEIRO</text>';
 $('#bands').innerHTML=bd;$('#axis').innerHTML=ax;
 
-/* gráfico: dias úteis */
-var USE=[['Phuket',2,3,'th'],['Bangkok',1,1,'th'],['Osaka',2,1,'jp'],['Tóquio',1,3,'jp']];
-var bs='',bw=120,gap=48,x0=70;
-USE.forEach(function(u,i){
-  var x=x0+i*(bw+gap),tot=u[1]+u[2],unit=26,base=170;
-  var hFull=u[1]*unit,hPart=u[2]*unit;
-  bs+='<rect x="'+x+'" y="'+(base-hFull-hPart)+'" width="'+bw+'" height="'+hPart+'" rx="6" fill="var(--fill3)"/>';
-  bs+='<rect x="'+x+'" y="'+(base-hFull)+'" width="'+bw+'" height="'+hFull+'" rx="6" fill="'+CMAP[u[3]]+'"/>';
-  bs+='<text x="'+(x+bw/2)+'" y="'+(base-hFull-hPart-10)+'" font-size="13" font-weight="700" text-anchor="middle" fill="var(--label)">'+u[1]+' cheio'+(u[1]>1?'s':'')+'</text>';
-  bs+='<text x="'+(x+bw/2)+'" y="192" font-size="13" font-weight="600" text-anchor="middle" fill="var(--label)">'+u[0]+'</text>';
-  bs+='<text x="'+(x+bw/2)+'" y="207" font-size="11" text-anchor="middle" fill="var(--label3)">'+tot+' dias no total</text>';
+/* gráfico: valor de cada dia */
+var VAL=[
+ ['23','th',.25,'chegada 19h'],['24','th',1,''],['25','th',1,''],['26','th',.75,'Shabat'],['27','th',1,''],
+ ['28','th',.75,'voo 8h'],['29','th',.25,'voo tarde'],['30','jp',1,''],['31','jp',1,''],
+ ['1','jp',.5,'trem + Shabat'],['2','jp',.75,'Shabat'],['3','jp',1,''],['4','jp',.5,'até 17h']
+];
+var bs='',bw=34,base=176,mx=112,x0=40,stp=48;
+[1,.75,.5,.25].forEach(function(v){
+  var y=base-v*mx;
+  bs+='<line x1="26" y1="'+y+'" x2="676" y2="'+y+'" stroke="var(--sep)" stroke-width="1" stroke-dasharray="2 5"/>';
+  bs+='<text x="20" y="'+(y+4)+'" font-size="10" text-anchor="end" fill="var(--label3)">'+v.toFixed(2).replace('.',',')+'</text>';
 });
+VAL.forEach(function(d,i){
+  var x=x0+i*stp,h=d[2]*mx,y=base-h;
+  bs+='<rect x="'+x+'" y="'+(base-mx)+'" width="'+bw+'" height="'+mx+'" rx="6" fill="var(--fill3)" opacity=".6"/>';
+  bs+='<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+h+'" rx="6" fill="'+CMAP[d[1]]+'"/>';
+  if(d[2]<1)bs+='<text x="'+(x+bw/2)+'" y="'+(y-7)+'" font-size="10.5" font-weight="700" text-anchor="middle" fill="var(--label2)">'+d[2].toFixed(2).replace('.',',')+'</text>';
+  bs+='<text x="'+(x+bw/2)+'" y="196" font-size="12" font-weight="640" text-anchor="middle" fill="var(--label)">'+d[0]+'</text>';
+  if(d[3])bs+='<text x="'+(x+bw/2)+'" y="212" font-size="8.5" text-anchor="middle" fill="var(--label3)" transform="rotate(-38 '+(x+bw/2)+' 212)">'+d[3]+'</text>';
+});
+bs+='<text x="196" y="232" font-size="10" text-anchor="middle" fill="var(--label3)">DEZEMBRO</text>';
+bs+='<text x="556" y="232" font-size="10" text-anchor="middle" fill="var(--label3)">JANEIRO</text>';
 $('#bars').innerHTML=bs;
+
+/* total por cidade */
+var CITY=[['Phuket','4,00','5 dias','th'],['Bangkok','1,00','2 dias','th'],['Osaka','2,00','3 dias','jp'],['Tóquio','2,75','4 dias','jp']];
+$('#cty').innerHTML=CITY.map(function(c){
+  return '<div class="cx"><i style="background:'+CMAP[c[3]]+'"></i><span><b>'+c[1]+'</b><br>'+c[0]+'<em>de '+c[2]+' presentes</em></span></div>';
+}).join('');
 
 /* rota */
 var RT=[['GRU',1],['DXB',1],['BKK',1],['HKT',0],['BKK',0],['KIX',0],['TYO',0],['DXB',1],['GRU',1]];
