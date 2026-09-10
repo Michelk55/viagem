@@ -94,6 +94,15 @@ section{padding-top:36px;scroll-margin-top:140px}
 .rv{opacity:0;transform:translateY(14px)}
 .rv.in{opacity:1;transform:none;transition:opacity .5s cubic-bezier(.2,.8,.2,1),transform .5s cubic-bezier(.2,.8,.2,1)}
 
+/* pendências */
+.pend{display:flex;gap:13px;padding:14px 16px;border-bottom:1px solid var(--urgbd);align-items:flex-start}
+.pend:last-child{border-bottom:0}
+.pnum{flex:none;width:24px;height:24px;border-radius:50%;background:var(--urg);color:var(--bg);display:grid;place-items:center;font-size:13px;font-weight:700;margin-top:1px}
+.pb{flex:1}
+.pt2{font-size:16px;font-weight:640;letter-spacing:-.018em;line-height:1.3}
+.pd{font-size:13.5px;color:var(--label2);margin-top:3px;line-height:1.45}
+.pk{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;background:var(--urgbg);color:var(--urg);border:1px solid var(--urgbd);margin-top:7px}
+
 .clk{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 @media(min-width:520px){.clk{grid-template-columns:repeat(4,1fr)}}
 .ck{background:var(--fill);border-radius:12px;padding:11px}
@@ -128,7 +137,6 @@ details.d[open]>summary{border-radius:var(--r) var(--r) 0 0;border-bottom:0;padd
 .cv{flex:none;width:15px;height:15px;color:var(--label3);margin-top:8px;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
 details.d[open] .cv{transform:rotate(180deg)}
 .badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;padding:2px 7px;border-radius:100px;background:var(--ac);color:var(--bg);margin-left:6px;vertical-align:2px}
-.val{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--fill2);color:var(--label3);margin-left:6px;vertical-align:1px}
 
 .db{background:var(--card);border:.5px solid var(--sep);border-top:0;border-radius:0 0 var(--r) var(--r);padding:0 14px 14px;animation:sl .3s cubic-bezier(.2,.8,.2,1)}
 @keyframes sl{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
@@ -176,14 +184,6 @@ table.sh{width:100%;border-collapse:collapse;font-size:14.5px;table-layout:fixed
 table.sh th{text-align:left;font-size:11.5px;color:var(--label3);font-weight:640;text-transform:uppercase;padding:0 8px 8px 0}
 table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-align:top;line-height:1.4}
 
-/* preços */
-.pz{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0 0}
-.pzi{background:var(--fill);border-radius:10px;padding:10px 11px}
-.pzi .k2{font-size:10.5px;color:var(--label3);font-weight:600;text-transform:uppercase;letter-spacing:.03em}
-.pzi .v2{font-size:17px;font-weight:680;letter-spacing:-.025em;margin-top:2px}
-.pzi .u2{font-size:12px;color:var(--label2);margin-top:1px}
-
-/* transfers */
 .tf{display:flex;gap:12px;padding:12px 16px;border-bottom:.5px solid var(--sep);align-items:flex-start}
 .tf:last-child{border-bottom:0}
 .tfd{flex:none;width:52px;font-size:12px;font-weight:700;color:var(--ac,var(--label3));line-height:1.25;padding-top:2px}
@@ -195,28 +195,23 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 .chart{width:100%;height:auto;display:block;overflow:visible}
 .chart text{font-family:inherit;fill:var(--label2)}
 .dash{stroke-dasharray:var(--L);stroke-dashoffset:var(--L)}
-.dash.go{animation:dr 1.5s cubic-bezier(.3,.7,.3,1) forwards}
+.dash.go{animation:dr 1.8s cubic-bezier(.3,.7,.3,1) forwards}
 @keyframes dr{to{stroke-dashoffset:0}}
-.leg2{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:var(--label2)}
-.leg2 i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
-.cty{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:16px}
-@media(min-width:520px){.cty{grid-template-columns:repeat(4,1fr)}}
-.cx{background:var(--fill);border-radius:12px;padding:11px;display:flex;align-items:flex-start;gap:8px}
-.cx i{width:8px;height:8px;border-radius:50%;flex:none;margin-top:7px}
-.cx b{font-size:19px;font-weight:680;letter-spacing:-.03em;line-height:1.1}
-.cx>span{flex:1;font-size:12px;color:var(--label2);line-height:1.35}
-.cx em{display:block;font-style:normal;font-size:10.5px;color:var(--label3);margin-top:1px}
 .mapwrap{margin:-2px -6px 2px}
 .land{fill:var(--map);opacity:.13}
 .grid{stroke:var(--map);opacity:.08;stroke-width:.8}
 .leg3{stroke:var(--fill3);stroke-width:2.4;fill:none;stroke-linecap:round}
-.legA{stroke:var(--gold);stroke-width:2.6;fill:none;stroke-linecap:round}
+.legT{stroke:var(--label3);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-dasharray:5 5}
+.legA{stroke:var(--gold);stroke-width:2.8;fill:none;stroke-linecap:round}
 .pin{fill:var(--card);stroke:var(--gold);stroke-width:2.6}
+.pinG{fill:var(--card);stroke:var(--label3);stroke-width:2.6}
 .pinT{fill:var(--label);font-size:15px;font-weight:700}
 .pinS{fill:var(--label3);font-size:11.5px;font-weight:500}
 .plane{fill:var(--gold)}
 @keyframes pl{0%,100%{opacity:.2}50%{opacity:.75}}
 .pulse{fill:var(--gold);animation:pl 2.8s ease-in-out infinite}
+.leg2{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:var(--label2)}
+.leg2 i{display:inline-block;width:16px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
 
 #wa{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:56;display:flex;align-items:center;gap:9px;padding:9px 16px 9px 11px;border-radius:100px;text-decoration:none;background:#1FA855;color:#fff;font-size:13.5px;font-weight:600;line-height:1.2;box-shadow:0 4px 18px rgba(0,0,0,.3);max-width:calc(100vw - 84px)}
 #wa svg{width:21px;height:21px;flex:none;fill:#fff}
@@ -250,17 +245,18 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
  </div>
  <div class="fchips" id="fl">
   <button class="chip act" data-s="all">Tudo</button>
-  <button class="chip" data-s="buy">A comprar</button>
+  <button class="chip" data-s="buy">Falta fechar</button>
   <button class="chip" data-s="tbd">A definir</button>
   <button class="chip" data-s="ok">Confirmado</button>
  </div>
  <nav class="chips" id="nv">
+  <a class="chip" href="#pendencias">Falta fechar</a>
   <a class="chip" href="#painel">Painel</a>
   <a class="chip" href="#dias">Cronograma</a>
   <a class="chip" href="#voos">Voos e trem</a>
-  <a class="chip" href="#transfers">Transfers</a>
   <a class="chip" href="#hoteis">Hotéis</a>
-  <a class="chip" href="#comprar">Falta comprar</a>
+  <a class="chip" href="#transfers">Transfers</a>
+  <a class="chip" href="#comprar">Passeios e pendências</a>
   <a class="chip" href="#essencial">Essencial</a>
  </nav>
 </div></div>
@@ -284,16 +280,37 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
   <div class="sx"><b class="cu" data-n="15">0</b><span>dias</span></div>
   <div class="sx"><b class="cu" data-n="11">0</b><span>noites em hotel</span></div>
   <div class="sx"><b class="cu" data-n="4">0</b><span>cidades</span></div>
-  <div class="sx"><b>56 h</b><span>no ar</span></div>
+  <div class="sx"><b class="cu" data-n="7">0</b><span>voos comprados</span></div>
   <div class="sx"><b class="cu" data-n="4">0</b><span>fusos</span></div>
   <div class="sx"><b class="cu" data-n="2">0</b><span>Shabatot</span></div>
  </div>
 </div>
 
+<!-- ═══ PENDÊNCIAS ═══ -->
+<section id="pendencias">
+ <h2 class="h2">Falta fechar</h2>
+ <p class="lede">Só transporte e hospedagem. Os sete voos da viagem já estão comprados e dois dos quatro hotéis já estão reservados. Sobraram estes três.</p>
+ <div class="card red pad0 rv">
+  <div class="pend"><div class="pnum">1</div><div class="pb">
+   <div class="pt2">Hotel em Bangkok</div>
+   <div class="pd">Noite de 27 para 28 de dezembro. É a única noite da viagem sem hotel escolhido. Chegada e saída são as duas em Suvarnabhumi, e no dia 28 vocês guardam as malas na recepção o dia inteiro.</div>
+   <span class="pk">1 noite · nem escolhido</span></div></div>
+  <div class="pend"><div class="pnum">2</div><div class="pb">
+   <div class="pt2">Mövenpick Myth Hotel Patong</div>
+   <div class="pd">De 23 a 27 de dezembro. Hotel já escolhido, falta apertar reservar. É a estadia mais longa da viagem e cai em alta temporada em Phuket.</div>
+   <span class="pk">4 noites · escolhido, não reservado</span></div></div>
+  <div class="pend"><div class="pnum">3</div><div class="pb">
+   <div class="pt2">Shinkansen Shin-Osaka para Tóquio</div>
+   <div class="pd">Dia 1º de janeiro às 07:00. É o único trecho de transporte da viagem que ainda não foi comprado. A reserva de assento abre um mês antes, em 1º de dezembro às 10:00 do horário do Japão, e é aí que se reserva também o espaço para bagagem grande.</div>
+   <span class="pk">reserva abre 1º de dezembro</span></div></div>
+ </div>
+ <div class="card rv"><div class="mt"><b style="color:var(--label);font-weight:620">Já resolvido:</b> os quatro voos Emirates e os três voos VietJet estão comprados, com assentos escolhidos. O Hotel Vista Osaka Namba e o Agora Tokyo Ginza estão reservados e confirmados.</div></div>
+</section>
+
 <!-- ═══ PAINEL ═══ -->
 <section id="painel">
  <h2 class="h2">Painel</h2>
- <p class="lede">A viagem vista de cima: a rota no mapa, quanto cada dia realmente rende e que horas são em cada fuso.</p>
+ <p class="lede">A rota no mapa e que horas são em cada fuso.</p>
 
  <div class="grp">A rota, no mapa</div>
  <div class="card rv"><div class="mapwrap">
@@ -316,9 +333,12 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
    <path class="leg3" d="M371,315 Q505,150 654,180 Q717,166 780,212"/>
    <path class="leg3" d="M780,212 Q779,222 773,227"/>
    <path class="leg3" d="M773,227 Q828,136 876,154"/>
-   <path class="leg3" d="M876,154 L890,151"/>
    <path class="leg3" d="M890,151 Q775,252 654,180 Q505,342 371,315"/>
-   <path class="legA dash" style="--L:1500" d="M371,315 Q505,150 654,180 Q717,166 780,212"/>
+   <path class="legA dash" style="--L:900" d="M371,315 Q505,150 654,180 Q717,166 780,212"/>
+   <path class="legA dash" style="--L:120" d="M780,212 Q779,222 773,227"/>
+   <path class="legA dash" style="--L:400" d="M773,227 Q828,136 876,154"/>
+   <path class="legA dash" style="--L:1000" d="M890,151 Q775,252 654,180 Q505,342 371,315"/>
+   <path class="legT" d="M876,154 L890,151"/>
    <circle class="pulse" cx="371" cy="315" r="9"/>
    <g>
     <circle class="pin" cx="371" cy="315" r="5.5"/><text class="pinT" x="371" y="341" text-anchor="middle">GRU</text><text class="pinS" x="371" y="356" text-anchor="middle">São Paulo</text>
@@ -326,26 +346,22 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
     <circle class="pin" cx="780" cy="212" r="5.5"/><text class="pinT" x="800" y="205" text-anchor="start">BKK</text><text class="pinS" x="800" y="219" text-anchor="start">Bangkok</text>
     <circle class="pin" cx="773" cy="240" r="5.5"/><text class="pinT" x="762" y="248" text-anchor="end">HKT</text><text class="pinS" x="762" y="262" text-anchor="end">Phuket</text>
     <circle class="pin" cx="876" cy="154" r="5.5"/><text class="pinT" x="866" y="140" text-anchor="end">KIX</text><text class="pinS" x="866" y="127" text-anchor="end">Osaka</text>
-    <circle class="pin" cx="900" cy="176" r="5.5"/><text class="pinT" x="912" y="182" text-anchor="start">NRT</text><text class="pinS" x="912" y="196" text-anchor="start">Tóquio</text>
+    <circle class="pinG" cx="900" cy="176" r="5.5"/><text class="pinT" x="912" y="182" text-anchor="start" fill="var(--label3)">TYO</text><text class="pinS" x="912" y="196" text-anchor="start">Tóquio</text>
    </g>
    <g class="plane"><path d="M13,0 L-3,-6 L-1,-1 L-10,-1 L-13,-4 L-15,-4 L-13,0 L-15,4 L-13,4 L-10,1 L-1,1 L-3,6 Z"/>
     <animateMotion dur="26s" repeatCount="indefinite" rotate="auto"><mpath href="#route"/></animateMotion></g>
   </svg></div>
-  <div class="mt">Nove trechos, quatro fusos e uma volta completa pelo hemisfério. A linha dourada é a ida até Bangkok, que já está emitida.</div>
+  <div class="leg2">
+   <span><i style="background:var(--gold)"></i>Voo comprado</span>
+   <span><i style="background:var(--label3)"></i>Trem, ainda não comprado</span>
+  </div>
+  <div class="mt" style="margin-top:12px">Toda a linha dourada já está paga: quatro trechos Emirates e três da Thai VietJet. O único pedaço cinza é o trem de Osaka para Tóquio, no dia 1º de janeiro.</div>
  </div>
 
  <div class="grp">A sequência</div>
  <div class="card rv">
   <svg class="chart" viewBox="0 0 700 132" role="img" aria-label="Sequência de aeroportos"><path class="dash" style="--L:1400" id="rp" d="" fill="none" stroke="var(--sep2)" stroke-width="2"/><g id="nodes"></g></svg>
-  <div class="mt" style="margin-top:6px">Os quatro pontos escuros são os trechos emitidos, os claros ainda não foram comprados, e o trecho Osaka a Tóquio é de trem.</div>
- </div>
-
- <div class="grp">Quanto cada dia realmente vale</div>
- <div class="card rv">
-  <svg class="chart" viewBox="0 0 700 236" role="img" aria-label="Valor de aproveitamento de cada dia"><g id="bars"></g></svg>
-  <div class="leg2"><span><i style="background:var(--th)"></i>Tailândia</span><span><i style="background:var(--jp)"></i>Japão</span><span><i style="background:var(--fill3)"></i>Parte do dia que o deslocamento come</span></div>
-  <div class="cty" id="cty"></div>
-  <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">10,25 dias aproveitáveis em 13 dias em terra.</b> Cheio conta 1,00; Shabat conta 0,75, porque é mais leve mas ainda é dia; meio dia conta 0,50; e dia que sobra só uma ponta conta 0,25. Os dias 22 de dezembro e 5 de janeiro ficam de fora, porque são voo do começo ao fim.</div>
+  <div class="mt" style="margin-top:6px">Nove pontos, oito trechos. Só o último ponto está em cinza, porque a chegada em Tóquio é a única que depende de um bilhete que ainda não existe.</div>
  </div>
 
  <div class="grp">Que horas são lá</div>
@@ -363,45 +379,45 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <details class="d tr" data-day="2026-12-21"><summary><div class="dn"><b class="mono">21</b><span>SEG</span></div><div class="dm"><div class="dc">São Paulo</div><div class="dt">Véspera, o voo sai de madrugada</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">22:30</div><div class="bd"><div class="hd"><strong>Check-in em Guarulhos, Terminal 3</strong></div><span class="ds">O voo é 01:30 do dia 22, então a saída de casa é na noite do dia 21. A Emirates pede 3 h de antecedência.</span></div></div></div>
-<div class="note"><b>Antes de sair:</b> passaporte com chip, TDAC com o QR Code salvo no celular e certificado de febre amarela.</div></div></details>
+<div class="note"><b>Antes de sair:</b> passaporte com chip, TDAC com o QR Code salvo no celular e certificado de febre amarela. Fazer o check-in online da VietJet 24 h antes do voo do dia 23.</div></div></details>
 
 <details class="d tr mv" data-day="2026-12-22"><summary><div class="dn"><b class="mono">22</b><span>TER</span></div><div class="dm"><div class="dc">Em trânsito</div><div class="dt">São Paulo para Dubai</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 12.5 3 10.2l1.6-1.6 4.3.6 3-3-6.6-3.4L6.9 1l8.2 2.3 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6L20.2 14l-1.8 1.6-3.4-6.6-3 3 .6 4.3-1.6 1.6z"/></svg></span>Deslocamento</div>
-<div class="it"><div class="tm mono">01:30</div><div class="bd"><div class="hd"><strong>EK262 · Guarulhos T3 para Dubai T3</strong><span class="st ok">Confirmado</span></div><span class="ds">Chega 22:35 no horário de Dubai. 14 h 05 de voo, em Airbus A380.</span></div></div>
+<div class="it"><div class="tm mono">01:30</div><div class="bd"><div class="hd"><strong>EK262 · Guarulhos T3 para Dubai T3</strong><span class="st ok">Comprado</span></div><span class="ds">Chega 22:35 no horário de Dubai. 14 h 05 de voo, em Airbus A380.</span></div></div>
 <div class="it"><div class="tm mono">22:35</div><div class="bd"><div class="hd"><strong>Conexão em Dubai, 4 h 30</strong></div><span class="ds">Área internacional, sem visto. Terminal 3 na chegada e na saída.</span></div></div></div>
 <div class="note">Dia inteiro em voo. Não há nada a planejar.</div></div></details>
 
-<details class="d th mv" data-day="2026-12-23"><summary><div class="dn"><b class="mono">23</b><span>QUA</span></div><div class="dm"><div class="dc">Phuket<span class="val">0,25</span></div><div class="dt">Chegada na Tailândia e voo para Phuket</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d th mv" data-day="2026-12-23"><summary><div class="dn"><b class="mono">23</b><span>QUA</span></div><div class="dm"><div class="dc">Phuket</div><div class="dt">Chegada na Tailândia e voo para Phuket</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 12.5 3 10.2l1.6-1.6 4.3.6 3-3-6.6-3.4L6.9 1l8.2 2.3 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6L20.2 14l-1.8 1.6-3.4-6.6-3 3 .6 4.3-1.6 1.6z"/></svg></span>Deslocamento</div>
-<div class="it"><div class="tm mono">03:05</div><div class="bd"><div class="hd"><strong>EK384 · Dubai T3 para Bangkok Suvarnabhumi</strong><span class="st ok">Confirmado</span></div><span class="ds">Chega 12:05 no horário da Tailândia.</span></div></div>
+<div class="it"><div class="tm mono">03:05</div><div class="bd"><div class="hd"><strong>EK384 · Dubai T3 para Bangkok Suvarnabhumi</strong><span class="st ok">Comprado</span></div><span class="ds">Chega 12:05 no horário da Tailândia.</span></div></div>
 <div class="it"><div class="tm mono">13:00</div><div class="bd"><div class="hd"><strong>Imigração e bagagem</strong></div><span class="ds">Apresentar o QR Code do TDAC. Cerca de 1 h entre pousar e sair.</span></div></div>
 <div class="it"><div class="tm mono">15:25</div><div class="bd"><div class="hd"><strong>VZ306 · Bangkok para Phuket</strong><span class="st ok">Comprado</span></div><span class="ds">Thai VietJet, tarifa Deluxe, direto, 1 h 35, chegando às 17:00. Sai do próprio Suvarnabhumi, sem troca de aeroporto, e sobram 3 h 20 entre pousar da Emirates e decolar. Localizador <b class="mono" style="color:var(--label)">A5BP2S</b> · assentos 5C e 5B · 20 kg despachados inclusos.</span></div></div>
 <div class="it"><div class="tm mono">18:00</div><div class="bd"><div class="hd"><strong>Aeroporto de Phuket para Patong</strong></div><span class="ds">Cerca de 1 h de carro.</span></div></div>
-<div class="it"><div class="tm mono">19:00</div><div class="bd"><div class="hd"><strong>Check-in no Mövenpick Myth Patong</strong><span class="st buy">A comprar</span></div></div></div></div>
+<div class="it"><div class="tm mono">19:00</div><div class="bd"><div class="hd"><strong>Check-in no Mövenpick Myth Patong</strong><span class="st buy">Falta reservar</span></div></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm mono">20:30</div><div class="bd"><div class="hd"><strong>Jantar em Patong</strong><span class="st tbd">A definir</span></div></div></div></div>
-<div class="note"><b>Trecho resolvido.</b> Voo comprado, assentos escolhidos e 20 kg despachados inclusos na tarifa Deluxe. Só falta o check-in online, que abre 24 h antes.</div></div></details>
+<div class="note">Dia de chegada. Só jantar e dormir. O dia seguinte começa às 7h30 com o barco para Phi Phi.</div></div></details>
 
-<details class="d th" data-day="2026-12-24"><summary><div class="dn"><b class="mono">24</b><span>QUI</span></div><div class="dm"><div class="dc">Phuket<span class="val">1,00</span></div><div class="dt">Phi Phi, dia inteiro de barco</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d th" data-day="2026-12-24"><summary><div class="dn"><b class="mono">24</b><span>QUI</span></div><div class="dm"><div class="dc">Phuket</div><div class="dt">Phi Phi, dia inteiro de barco</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">07:30</div><div class="bd"><div class="hd"><strong>Passeio de barco para as ilhas Phi Phi</strong><span class="st buy">A comprar</span></div><span class="ds">Ocupa o dia inteiro, com retorno por volta das 17:30. Levar protetor solar, roupa de banho vestida e dinheiro em espécie para as taxas de parque nacional, quase sempre cobradas à parte.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm mono">20:00</div><div class="bd"><div class="hd"><strong>Jantar em Patong</strong><span class="st tbd">A definir</span></div></div></div></div>
 <div class="note"><b>Dia dedicado a uma coisa só.</b> Phi Phi come o dia inteiro e não sobra nada para encaixar em volta.</div></div></details>
 
-<details class="d th" data-day="2026-12-25"><summary><div class="dn"><b class="mono">25</b><span>SEX</span></div><div class="dm"><div class="dc">Phuket<span class="val">1,00</span><span class="badge">Shabat</span></div><div class="dt">Elefantes de manhã, tarde a escolher</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d th" data-day="2026-12-25"><summary><div class="dn"><b class="mono">25</b><span>SEX</span></div><div class="dm"><div class="dc">Phuket<span class="badge">Shabat</span></div><div class="dt">Elefantes de manhã, tarde a escolher</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Manhã</div>
 <div class="it"><div class="tm mono">08:30</div><div class="bd"><div class="hd"><strong>Santuário de elefantes, com banho</strong><span class="st buy">A comprar</span></div><span class="ds">De 40 a 60 min de Patong, programa de 2 h a 3 h. Reservar a sessão da manhã, que é a mais fresca e deixa a tarde livre. Volta a Patong por volta das 12:30.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Tarde · escolher uma linha</div>
-<div class="it"><div class="tm mono">13:30</div><div class="bd"><div class="hd"><strong>Linha A · Andamanda Phuket</strong><span class="st buy">A comprar</span></div><span class="ds">Parque aquático em Kathu, 15 min de Patong. Sozinho, ocupa a tarde inteira até as 17:00. É uma coisa só, bem feita.</span></div></div>
-<div class="it"><div class="tm mono">13:30</div><div class="bd"><div class="hd"><strong>Linha B · Centrinho, Lion Café e kart</strong><span class="st tbd">A definir</span></div><span class="ds">Três programas curtos que cabem juntos: uma volta pelo centrinho de Patong, o café com leões, e a pista de kart nas montanhas de Kathu, que fica perto do Andamanda. Cerca de 1 h em cada um, com deslocamentos curtos entre eles.</span></div></div>
+<div class="it"><div class="tm mono">13:30</div><div class="bd"><div class="hd"><strong>Linha A · Andamanda Phuket</strong><span class="st buy">A comprar</span></div><span class="ds">Parque aquático em Kathu, 15 min de Patong. Sozinho, ocupa a tarde inteira até as 17:00.</span></div></div>
+<div class="it"><div class="tm mono">13:30</div><div class="bd"><div class="hd"><strong>Linha B · Centrinho, Lion Café e kart</strong><span class="st tbd">A definir</span></div><span class="ds">Três programas curtos que cabem juntos: uma volta pelo centrinho de Patong, o café com leões, e a pista de kart nas montanhas de Kathu, que fica perto do Andamanda. Cerca de 1 h em cada um.</span></div></div>
 <div class="it"><div class="tm mono">17:00</div><div class="bd"><div class="hd"><strong>Volta ao hotel, horário limite</strong></div><span class="ds">Uma hora de folga antes do Shabat, contando com o trânsito de alta temporada.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm mono">19:30</div><div class="bd"><div class="hd"><strong>Jantar de Shabat no Chabad de Phuket</strong><span class="st buy">A comprar</span></div><span class="ds">Rat-U-Thit 200 Pee Rd, Patong, na mesma via do hotel. Avisar com antecedência para garantir lugar.</span></div></div></div>
-<div class="warn"><b>As duas linhas não cabem juntas.</b> Depois do santuário sobram 4 h 30, e o Andamanda sozinho já usa todas elas. Ou vocês fazem o parque aquático, ou fazem os três programas curtos. Tentar os quatro significa correr em todos e chegar em cima do Shabat.</div>
+<div class="warn"><b>As duas linhas não cabem juntas.</b> Depois do santuário sobram 4 h 30, e o Andamanda sozinho já usa todas elas. Ou vocês fazem o parque aquático, ou fazem os três programas curtos.</div>
 <div class="shb"><b>Shabat entra às 18:00.</b> Horário aproximado, confirmar com o Chabad local.</div></div></details>
 
-<details class="d th" data-day="2026-12-26"><summary><div class="dn"><b class="mono">26</b><span>SÁB</span></div><div class="dm"><div class="dc">Phuket<span class="val">0,75</span><span class="badge">Shabat</span></div><div class="dt">Praia, massagem e as ruas de bar à noite</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d th" data-day="2026-12-26"><summary><div class="dn"><b class="mono">26</b><span>SÁB</span></div><div class="dm"><div class="dc">Phuket<span class="badge">Shabat</span></div><div class="dt">Praia, massagem e as ruas de bar à noite</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm">Manhã</div><div class="bd"><div class="hd"><strong>Praia de Patong e descanso</strong></div><span class="ds">Único dia sem nada marcado. É o respiro do meio da viagem.</span></div></div>
 <div class="it"><div class="tm">Tarde</div><div class="bd"><div class="hd"><strong>Massagem</strong><span class="st tbd">A definir</span></div><span class="ds">Patong tem casas de massagem em cada quarteirão. Não precisa reservar.</span></div></div>
@@ -411,19 +427,18 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="it"><div class="tm mono">20:00</div><div class="bd"><div class="hd"><strong>Jantar em Patong</strong><span class="st tbd">A definir</span></div></div></div></div>
 <div class="shb"><b>Shabat sai às 19:10.</b> O jantar e as ruas de bar já ficam depois disso.</div></div></details>
 
-<details class="d th mv" data-day="2026-12-27"><summary><div class="dn"><b class="mono">27</b><span>DOM</span></div><div class="dm"><div class="dc">Phuket para Bangkok<span class="val">0,75</span></div><div class="dt">Jetski de manhã, praia à tarde, voo às 19:35</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d th mv" data-day="2026-12-27"><summary><div class="dn"><b class="mono">27</b><span>DOM</span></div><div class="dm"><div class="dc">Phuket para Bangkok</div><div class="dt">Jetski de manhã, praia à tarde, voo às 19:35</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
-<div class="it"><div class="tm mono">08:30</div><div class="bd"><div class="hd"><strong>Checkout, malas guardadas no hotel</strong></div><span class="ds">Fazer o checkout antes de sair, porque vocês só voltam para pegar as malas às 17:30. O hotel está reservado até hoje, não até amanhã.</span></div></div>
+<div class="it"><div class="tm mono">08:30</div><div class="bd"><div class="hd"><strong>Checkout, malas guardadas no hotel</strong></div><span class="ds">Fazer o checkout antes de sair, porque vocês só voltam para pegar as malas às 16:30.</span></div></div>
 <div class="it"><div class="tm mono">09:00</div><div class="bd"><div class="hd"><strong>Tour de jetski pela ilha</strong><span class="st buy">A comprar</span></div><span class="ds">Passeio guiado de 4 h que sai de Patong e roda ilhas e praias da costa, com retorno por volta das 13:00. Fechar o horário de retorno junto com a reserva.</span></div></div>
 <div class="it"><div class="tm mono">13:30</div><div class="bd"><div class="hd"><strong>Almoço na praia e tarde livre</strong><span class="st tbd">A definir</span></div><span class="ds">Almoçar num dos restaurantes de pé na areia em Patong e ficar na praia até as 16:30. É o último sol da viagem.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 12.5 3 10.2l1.6-1.6 4.3.6 3-3-6.6-3.4L6.9 1l8.2 2.3 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6L20.2 14l-1.8 1.6-3.4-6.6-3 3 .6 4.3-1.6 1.6z"/></svg></span>Deslocamento</div>
 <div class="it"><div class="tm mono">16:30</div><div class="bd"><div class="hd"><strong>Pegar as malas e sair para o aeroporto</strong></div><span class="ds">Cerca de 1 h de Patong até o HKT. Chegam às 17:30, com 2 h de antecedência.</span></div></div>
-<div class="it"><div class="tm mono">19:35</div><div class="bd"><div class="hd"><strong>VZ2305 · Phuket para Bangkok Suvarnabhumi</strong><span class="st ok">Comprado</span></div><span class="ds">Thai VietJet, tarifa Deluxe, direto, 1 h 30, chegando às 21:05 em Suvarnabhumi. Mesmo localizador da ida, <b class="mono" style="color:var(--label)">A5BP2S</b> · assentos 5C e 5B · 20 kg despachados inclusos.</span></div></div>
+<div class="it"><div class="tm mono">19:35</div><div class="bd"><div class="hd"><strong>VZ2305 · Phuket para Bangkok Suvarnabhumi</strong><span class="st ok">Comprado</span></div><span class="ds">Thai VietJet, tarifa Deluxe, direto, 1 h 30, chegando às 21:05. Mesmo localizador da ida, <b class="mono" style="color:var(--label)">A5BP2S</b> · assentos 5C e 5B · 20 kg despachados inclusos.</span></div></div>
 <div class="it"><div class="tm mono">22:00</div><div class="bd"><div class="hd"><strong>Check-in no hotel de Bangkok</strong><span class="st tbd">A definir</span></div><span class="ds">De 30 a 45 min de Suvarnabhumi até o centro.</span></div></div></div>
-<div class="warn"><b>A praia acabou uma hora mais cedo.</b> Com a saída às 19:35 em vez de 20:40, vocês precisam deixar a praia às 16:30. Não dá para esticar: é voo doméstico em alta temporada e o check-in fecha.</div>
-<div class="note"><b>Um problema resolvido:</b> a Thai Vietjet pousa em <b>Suvarnabhumi</b>, o mesmo aeroporto de onde vocês embarcam amanhã à noite. Some a confusão de dois aeroportos opostos em Bangkok.</div></div></details>
+<div class="warn"><b>A praia acaba às 16:30.</b> Não dá para esticar: é voo doméstico em alta temporada e o check-in fecha.</div></div></details>
 
-<details class="d th mv" data-day="2026-12-28"><summary><div class="dn"><b class="mono">28</b><span>SEG</span></div><div class="dm"><div class="dc">Bangkok<span class="val">1,00</span></div><div class="dt">Templos, ICONSIAM, luta e voo da madrugada</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d th mv" data-day="2026-12-28"><summary><div class="dn"><b class="mono">28</b><span>SEG</span></div><div class="dm"><div class="dc">Bangkok</div><div class="dt">Templos, ICONSIAM, luta e voo da madrugada</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">08:00</div><div class="bd"><div class="hd"><strong>Checkout, malas guardadas no hotel</strong></div><span class="ds">A noite de hoje é dentro do avião, então não há diária. Vocês voltam ao hotel só às 20:50 para pegar as malas.</span></div></div>
 <div class="it"><div class="tm mono">08:30</div><div class="bd"><div class="hd"><strong>Grande Palácio</strong></div><span class="ds">Abre às 8:30 e vale chegar na abertura, antes do calor e das excursões. Uma volta sem pressa leva 1 h 15. Exige ombros e joelhos cobertos, inclusive para homens.</span></div></div>
@@ -432,17 +447,17 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="it"><div class="tm mono">13:30</div><div class="bd"><div class="hd"><strong>ICONSIAM</strong></div><span class="ds">Shopping à beira do rio Chao Phraya. Tem mirante, praça ribeirinha e um andar de mercado coberto que reproduz um mercado tradicional.</span></div></div>
 <div class="it"><div class="tm mono">16:30</div><div class="bd"><div class="hd"><strong>Rooftop à beira do rio</strong><span class="st tbd">A definir</span></div><span class="ds">O mais perto do ICONSIAM é o Three Sixty, no Millennium Hilton, ligado por barco de cortesia. Dress code: quase todos os rooftops de Bangkok barram bermuda e sandália em homens.</span></div></div>
 <div class="it"><div class="tm mono">18:00</div><div class="bd"><div class="hd"><strong>Luta de Muay Thai</strong><span class="st buy">A comprar</span></div><span class="ds">Dia 28 é segunda-feira: o Rajadamnern é a aposta mais provável, já que o Lumpinee concentra as lutas em terça, sexta e sábado. Conferir a hora de início antes de comprar, porque o dia acaba às 21:00.</span></div></div>
-<div class="it"><div class="tm mono">19:45</div><div class="bd"><div class="hd"><strong>Jantar em Yaowarat, a Chinatown</strong></div><span class="ds">A rua de comida de rua acende por volta das 18:00 e fica no caminho de volta do estádio para o hotel. É onde vocês jantam antes de embarcar.</span></div></div></div>
+<div class="it"><div class="tm mono">19:45</div><div class="bd"><div class="hd"><strong>Jantar em Yaowarat, a Chinatown</strong></div><span class="ds">A rua de comida de rua acende por volta das 18:00 e fica no caminho de volta do estádio para o hotel.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 12.5 3 10.2l1.6-1.6 4.3.6 3-3-6.6-3.4L6.9 1l8.2 2.3 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6L20.2 14l-1.8 1.6-3.4-6.6-3 3 .6 4.3-1.6 1.6z"/></svg></span>Deslocamento</div>
 <div class="it"><div class="tm mono">20:50</div><div class="bd"><div class="hd"><strong>Passar no hotel e pegar as malas</strong></div></div></div>
 <div class="it"><div class="tm mono">21:00</div><div class="bd"><div class="hd"><strong>Sair para Suvarnabhumi</strong></div><span class="ds">De 45 min a 1 h. Estar no aeroporto às 22:00, para o voo internacional de 00:25.</span></div></div></div>
-<div class="warn"><b>Só funciona se a luta começar até 18:00.</b> Rooftop, luta e jantar em Yaowarat encaixados entre 16:30 e 20:50 não têm um minuto de folga. Se a programação do Rajadamnern começar às 19:00 ou depois, a luta sai e o Yaowarat fica.</div></div></details>
+<div class="warn"><b>Só funciona se a luta começar até 18:00.</b> Rooftop, luta e jantar em Yaowarat encaixados entre 16:30 e 20:50 não têm um minuto de folga. Se o Rajadamnern começar às 19:00 ou depois, a luta sai e o Yaowarat fica.</div></div></details>
 
-<details class="d jp mv" data-day="2026-12-29"><summary><div class="dn"><b class="mono">29</b><span>TER</span></div><div class="dm"><div class="dc">Osaka<span class="val">0,75</span></div><div class="dt">Pouso às 7h55, Kaiyukan e teamLab</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d jp mv" data-day="2026-12-29"><summary><div class="dn"><b class="mono">29</b><span>TER</span></div><div class="dm"><div class="dc">Osaka</div><div class="dt">Pouso às 7h55, Kaiyukan e teamLab</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 12.5 3 10.2l1.6-1.6 4.3.6 3-3-6.6-3.4L6.9 1l8.2 2.3 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6L20.2 14l-1.8 1.6-3.4-6.6-3 3 .6 4.3-1.6 1.6z"/></svg></span>Deslocamento</div>
-<div class="it"><div class="tm mono">00:25</div><div class="bd"><div class="hd"><strong>VZ820 · Bangkok para Osaka Kansai</strong><span class="st ok">Comprado</span></div><span class="ds">Thai VietJet, tarifa Deluxe, 5 h 30 de voo noturno, chegando às 07:55 no Terminal 1 de Kansai. Localizador <b class="mono" style="color:var(--label)">WZH8ZP</b> · assentos 4C e 4A · 20 kg despachados inclusos · <b style="color:var(--label)">R$ 2.912 por pessoa</b>.</span></div></div>
+<div class="it"><div class="tm mono">00:25</div><div class="bd"><div class="hd"><strong>VZ820 · Bangkok para Osaka Kansai</strong><span class="st ok">Comprado</span></div><span class="ds">Thai VietJet, tarifa Deluxe, 5 h 30 de voo noturno, chegando às 07:55 no Terminal 1 de Kansai. Localizador <b class="mono" style="color:var(--label)">WZH8ZP</b> · assentos 4C e 4A · 20 kg despachados inclusos.</span></div></div>
 <div class="it"><div class="tm mono">09:00</div><div class="bd"><div class="hd"><strong>Kansai para o centro de Osaka</strong></div><span class="ds">Cerca de 1 h de trem. Os trens do aeroporto rodam normalmente a essa hora.</span></div></div>
-<div class="it"><div class="tm mono">10:00</div><div class="bd"><div class="hd"><strong>Deixar as malas no Hotel Vista Osaka Namba</strong><span class="st ok">Reservado</span></div><span class="ds">Chuo-ku Suemoncho 1-1, na região de Namba. O check-in oficial é das 15:00 à meia-noite, então de manhã é só guarda-volumes. Telefone do hotel: +81 6-4708-5519.</span></div></div></div>
+<div class="it"><div class="tm mono">10:00</div><div class="bd"><div class="hd"><strong>Deixar as malas no Hotel Vista Osaka Namba</strong><span class="st ok">Reservado</span></div><span class="ds">Chuo-ku Suemoncho 1-1, na região de Namba. O check-in oficial é das 15:00 à meia-noite, então de manhã é só guarda-volumes.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">12:00</div><div class="bd"><div class="hd"><strong>Osaka Aquarium Kaiyukan</strong><span class="st buy">A comprar</span></div><span class="ds">Em Tempozan, na baía, cerca de 25 min de metrô de Namba. É um dos maiores aquários do mundo, todo organizado em torno de um tanque central com tubarão-baleia.</span></div></div>
 <div class="it"><div class="tm mono">17:00</div><div class="bd"><div class="hd"><strong>teamLab Botanical Garden Osaka</strong><span class="st buy">A comprar</span></div><span class="ds">Percurso de instalações de luz ao ar livre dentro do Nagai Park, no sul de Osaka. Cerca de 45 min de Tempozan. É noturno e é externo, e dezembro em Osaka chega perto de zero à noite, então roupa de frio de verdade.</span></div></div>
@@ -450,9 +465,9 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm">Jantar</div><div class="bd"><div class="hd"><strong>Sushi em Dotonbori</strong><span class="st tbd">A definir</span></div></div></div></div>
 <div class="warn"><b>É o dia mais pesado da viagem e vocês vão chegar sem dormir.</b> Dormir sentado num 737 por 5 h 30 não é dormir, e o dia tem aquário, teamLab e ainda uma caminhada noturna. Se cansar, o teamLab é o que dá para sacrificar sem perder muito, porque vocês fazem o teamLab Planets em Tóquio no dia 3.</div>
-<div class="note"><b>É a virada térmica da viagem.</b> Vocês saem de 31 °C em Bangkok e desembarcam em cerca de 8 °C em Osaka, seis horas depois. O casaco tem que estar na bagagem de mão, não na despachada.</div></div></details>
+<div class="note"><b>É a virada térmica da viagem.</b> Vocês saem de cerca de 31 °C em Bangkok e desembarcam em cerca de 8 °C em Osaka, seis horas depois. O casaco tem que estar na bagagem de mão, não na despachada.</div></div></details>
 
-<details class="d jp" data-day="2026-12-30"><summary><div class="dn"><b class="mono">30</b><span>QUA</span></div><div class="dm"><div class="dc">Osaka<span class="val">1,00</span></div><div class="dt">Universal Studios e noite em Namba</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d jp" data-day="2026-12-30"><summary><div class="dn"><b class="mono">30</b><span>QUA</span></div><div class="dm"><div class="dc">Osaka</div><div class="dt">Universal Studios e noite em Namba</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">08:30</div><div class="bd"><div class="hd"><strong>Universal Studios Japan</strong><span class="st buy">A comprar</span></div><span class="ds">Em Konohana, cerca de 20 min de trem do hotel. O ingresso é vinculado a uma data específica e 30 de dezembro é feriado nacional em pico de temporada. Comprar ingresso e Express Pass com bastante antecedência.</span></div></div>
 <div class="it"><div class="tm mono">18:30</div><div class="bd"><div class="hd"><strong>Voltar ao hotel, banho e descanso</strong></div><span class="ds">Sem o teamLab hoje, dá para sair do parque no fim da tarde, passar no hotel e sair de novo já trocado.</span></div></div>
@@ -460,12 +475,12 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm">Almoço</div><div class="bd"><div class="hd"><strong>Dentro do parque</strong></div></div></div>
 <div class="it"><div class="tm mono">21:00</div><div class="bd"><div class="hd"><strong>Sushi em Namba</strong><span class="st tbd">A definir</span></div></div></div></div>
-<div class="note"><b>O dia ficou mais leve do que era.</b> Com o teamLab movido para o dia 29, vocês podem sair da Universal no seu ritmo, sem correr para atravessar a cidade.</div></div></details>
+<div class="note"><b>Com o teamLab no dia 29, este dia ficou livre.</b> Dá para sair da Universal no ritmo de vocês, sem correr para atravessar a cidade.</div></div></details>
 
-<details class="d jp" data-day="2026-12-31"><summary><div class="dn"><b class="mono">31</b><span>QUI</span></div><div class="dm"><div class="dc">Osaka<span class="val">1,00</span></div><div class="dt">Shitennoji, compras e virada do ano</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d jp" data-day="2026-12-31"><summary><div class="dn"><b class="mono">31</b><span>QUI</span></div><div class="dm"><div class="dc">Osaka</div><div class="dt">Shitennoji, compras e virada do ano</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">09:30</div><div class="bd"><div class="hd"><strong>Shitennoji</strong></div><span class="ds">O principal templo budista de Osaka, em Tennoji, e um dos mais antigos do Japão. Cerca de 15 min de metrô do hotel.</span></div></div>
-<div class="it"><div class="tm mono">14:00</div><div class="bd"><div class="hd"><strong>Compras em Shinsaibashi</strong></div><span class="ds">A galeria coberta de 600 m que sai da porta do hotel. É o dia de compras de Osaka. O comércio começa a fechar mais cedo hoje, por causa da véspera de ano-novo.</span></div></div>
+<div class="it"><div class="tm mono">14:00</div><div class="bd"><div class="hd"><strong>Compras em Shinsaibashi</strong></div><span class="ds">A galeria coberta de 600 m ao lado do hotel. É o dia de compras de Osaka. O comércio começa a fechar mais cedo hoje, por causa da véspera de ano-novo.</span></div></div>
 <div class="it"><div class="tm mono">22:00</div><div class="bd"><div class="hd"><strong>Virada do ano com os amigos</strong><span class="st tbd">A definir</span></div></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm mono">12:30</div><div class="bd"><div class="hd"><strong>Almoço em sushi de qualidade</strong><span class="st buy">A comprar</span></div><span class="ds">É o último dia antes do feriado longo fechar as casas boas. Se houver um balcão de sushi que vocês querem em Osaka, é hoje, e vale reservar com antecedência.</span></div></div>
@@ -473,12 +488,12 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="warn"><b>Dormir cedo virou obrigação.</b> O Shinkansen de amanhã sai às 07:00 e vocês precisam sair do hotel às 06:15. Se a festa varar, o trem das 07:00 não acontece e o dia 1º em Tóquio some.</div>
 <div class="note"><b>Volta da festa resolvida:</b> em 31 de dezembro várias linhas de trem no Japão rodam a noite inteira.</div></div></details>
 
-<details class="d jp mv" data-day="2027-01-01"><summary><div class="dn"><b class="mono">01</b><span>SEX</span></div><div class="dm"><div class="dc">Osaka para Tóquio<span class="val">0,50</span><span class="badge">Shabat</span></div><div class="dt">Trem às 7h e hatsumode em Asakusa</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d jp mv" data-day="2027-01-01"><summary><div class="dn"><b class="mono">01</b><span>SEX</span></div><div class="dm"><div class="dc">Osaka para Tóquio<span class="badge">Shabat</span></div><div class="dt">Trem às 7h e hatsumode em Asakusa</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 9h14M8 21l-2 2M16 21l2 2"/></svg></span>Deslocamento</div>
 <div class="it"><div class="tm mono">05:30</div><div class="bd"><div class="hd"><strong>Acordar e fazer o checkout</strong></div></div></div>
-<div class="it"><div class="tm mono">06:15</div><div class="bd"><div class="hd"><strong>Hotel para a estação Shin-Osaka</strong></div><span class="ds">Cerca de 15 min pela linha Midosuji, que passa embaixo do hotel e vai direto até Shin-Osaka, sem baldeação.</span></div></div>
-<div class="it"><div class="tm mono">07:00</div><div class="bd"><div class="hd"><strong>Shinkansen Shin-Osaka para Tóquio</strong><span class="st buy">A comprar</span></div><span class="ds">Cerca de 2 h 30 no Nozomi, chegando às 09:30. A reserva de assento abre um mês antes, em 1º de dezembro às 10:00 do horário do Japão. Reservar também o assento com espaço para bagagem grande.</span></div></div>
-<div class="it"><div class="tm mono">10:15</div><div class="bd"><div class="hd"><strong>Deixar as malas no Agora Tokyo Ginza</strong><span class="st buy">Reservado, falta pagar</span></div><span class="ds">Poucos minutos da estação de Tóquio. Check-in de verdade a partir das 15:00, mas dá para largar as malas e sair na hora.</span></div></div></div>
+<div class="it"><div class="tm mono">06:15</div><div class="bd"><div class="hd"><strong>Hotel para a estação Shin-Osaka</strong></div><span class="ds">Da estação de Namba, linha Midosuji direto até Shin-Osaka, sem baldeação, cerca de 17 min.</span></div></div>
+<div class="it"><div class="tm mono">07:00</div><div class="bd"><div class="hd"><strong>Shinkansen Shin-Osaka para Tóquio</strong><span class="st buy">A comprar</span></div><span class="ds">Cerca de 2 h 30 no Nozomi, chegando às 09:30. A reserva de assento abre em 1º de dezembro às 10:00 do horário do Japão. Reservar também o assento com espaço para bagagem grande.</span></div></div>
+<div class="it"><div class="tm mono">10:15</div><div class="bd"><div class="hd"><strong>Deixar as malas no Agora Tokyo Ginza</strong><span class="st ok">Reservado</span></div><span class="ds">Poucos minutos da estação de Tóquio. Check-in de verdade a partir das 15:00, mas dá para largar as malas e sair na hora.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">11:00</div><div class="bd"><div class="hd"><strong>Sensoji e Asakusa</strong></div><span class="ds">1º de janeiro é o dia do hatsumode, a primeira visita do ano ao templo, e é justamente o que continua funcionando quando quase tudo está fechado. O terreno fica tomado de gente, com barracas de comida no pátio. O átrio principal tem fila de horas, mas andar pelo complexo é aberto e vale por si.</span></div></div>
 <div class="it"><div class="tm mono">13:00</div><div class="bd"><div class="hd"><strong>Nakamise-dori e Hoppy-dori</strong></div><span class="ds">As duas ruas de comida ao lado do templo. No ano-novo ficam abertas e cheias, e são a aposta mais segura de comida de rua nesses dias.</span></div></div>
@@ -487,17 +502,17 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="it"><div class="tm mono">18:00</div><div class="bd"><div class="hd"><strong>Comida do Chabad entregue no hotel</strong><span class="st buy">A comprar</span></div><span class="ds">O Chabad de Tóquio entrega refeições em qualquer lugar da cidade, com pedido antecipado, e é a saída certa para o dia 1º, que é o dia com menos coisa aberta no Japão inteiro. Encomendar com antecedência, porque o feriado aperta a operação deles também.</span></div></div></div>
 <div class="shb"><b>Shabat entra às 16:20.</b> É o pôr do sol mais cedo do ano em Tóquio. Por isso o trem sai às 07:00 e não ao meio-dia: assim o dia 1º deixa de ser só deslocamento e vira meio dia de verdade.</div></div></details>
 
-<details class="d jp" data-day="2027-01-02"><summary><div class="dn"><b class="mono">02</b><span>SÁB</span></div><div class="dm"><div class="dc">Tóquio<span class="val">0,75</span><span class="badge">Shabat</span></div><div class="dt">Shibuya de dia, compras e sushi à noite</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d jp" data-day="2027-01-02"><summary><div class="dn"><b class="mono">02</b><span>SÁB</span></div><div class="dm"><div class="dc">Tóquio<span class="badge">Shabat</span></div><div class="dt">Shibuya de dia, compras e sushi à noite</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm">Manhã</div><div class="bd"><div class="hd"><strong>Shibuya e Harajuku</strong></div><span class="ds">Dia de rua e bairro. As lojas de departamento reabrem hoje com as sacolas da sorte de ano-novo, o que gera fila e multidão logo cedo.</span></div></div>
 <div class="it"><div class="tm">Tarde</div><div class="bd"><div class="hd"><strong>Omotesando</strong></div><span class="ds">A avenida arborizada de lojas grandes entre Harajuku e Aoyama.</span></div></div>
 <div class="it"><div class="tm mono">18:00</div><div class="bd"><div class="hd"><strong>Compras de verdade em Ginza</strong></div><span class="ds">Depois que o Shabat sai, as lojas de Ginza ainda ficam abertas por algumas horas e é a pé do hotel. É o melhor bloco de compras de Tóquio no roteiro.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm">Almoço</div><div class="bd"><div class="hd"><strong>Sushi de esteira ou depachika</strong></div><span class="ds">Balcão pequeno ainda está fechado no dia 2. As redes de esteira e os subsolos gastronômicos das lojas de departamento de Ginza funcionam e resolvem.</span></div></div>
-<div class="it"><div class="tm mono">20:30</div><div class="bd"><div class="hd"><strong>Jantar em sushi bom</strong><span class="st tbd">A definir</span></div><span class="ds">Depois do Shabat, e já com parte das casas reabrindo.</span></div></div></div>
+<div class="it"><div class="tm mono">20:30</div><div class="bd"><div class="hd"><strong>Jantar em sushi bom</strong><span class="st tbd">A definir</span></div></div></div></div>
 <div class="shb"><b>Shabat sai às 17:50.</b> O dia é a pé e de metrô, e compras e jantar entram só depois disso.</div></div></details>
 
-<details class="d jp" data-day="2027-01-03"><summary><div class="dn"><b class="mono">03</b><span>DOM</span></div><div class="dm"><div class="dc">Tóquio<span class="val">1,00</span></div><div class="dt">teamLab Planets, Shibuya Crossing e Shibuya Sky</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d jp" data-day="2027-01-03"><summary><div class="dn"><b class="mono">03</b><span>DOM</span></div><div class="dm"><div class="dc">Tóquio</div><div class="dt">teamLab Planets, Shibuya Crossing e Shibuya Sky</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
 <div class="it"><div class="tm mono">10:30</div><div class="bd"><div class="hd"><strong>teamLab Planets, em Toyosu</strong><span class="st buy">A comprar</span></div><span class="ds">Cerca de 25 min de Ginza. O percurso é feito descalço e parte das salas tem água na altura do joelho, então ir de calça que dobre ou bermuda. Ingresso com data e horário marcados, que esgota.</span></div></div>
 <div class="it"><div class="tm mono">14:30</div><div class="bd"><div class="hd"><strong>Shibuya Crossing</strong></div><span class="ds">O cruzamento mais movimentado do mundo. A vista de cima da estação e do café em frente é gratuita.</span></div></div>
@@ -505,11 +520,11 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
 <div class="it"><div class="tm mono">13:00</div><div class="bd"><div class="hd"><strong>Almoço de sushi</strong><span class="st tbd">A definir</span></div></div></div>
 <div class="it"><div class="tm mono">19:30</div><div class="bd"><div class="hd"><strong>Jantar em balcão de sushi</strong><span class="st buy">A comprar</span></div><span class="ds">É o primeiro dia em que balcão de sushi de verdade volta a abrir depois do feriado. Se for reservar um lugar bom em Tóquio, reserve para hoje.</span></div></div></div>
-<div class="note"><b>É o único dia que vale 1,00 em Tóquio.</b> O dia 1º é meia tarde, o dia 2 é Shabat e o dia 4 acaba às 17:00.</div></div></details>
+<div class="note"><b>É o dia mais cheio de Tóquio.</b> O dia 1º é meia tarde, o dia 2 é Shabat e o dia 4 acaba às 17:00. O que for inegociável, coloca aqui.</div></div></details>
 
-<details class="d jp mv" data-day="2027-01-04"><summary><div class="dn"><b class="mono">04</b><span>SEG</span></div><div class="dm"><div class="dc">Tóquio para a volta<span class="val">0,50</span></div><div class="dt">Tsukiji de manhã e voo à noite</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<details class="d jp mv" data-day="2027-01-04"><summary><div class="dn"><b class="mono">04</b><span>SEG</span></div><div class="dm"><div class="dc">Tóquio para a volta</div><div class="dt">Tsukiji de manhã e voo à noite</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Programação</div>
-<div class="it"><div class="tm mono">08:30</div><div class="bd"><div class="hd"><strong>Tsukiji Outer Market</strong></div><span class="ds">O mercado externo de peixe, com bancas de comida de rua e restaurantes de sushi de balcão. Fica a uma caminhada de Ginza, entre 10 e 20 min dependendo da ponta do bairro, então é o programa perfeito para a última manhã. Confirme a distância pelo endereço do hotel. Ir cedo, porque as bancas boas esvaziam antes do meio-dia.</span></div></div>
+<div class="it"><div class="tm mono">08:30</div><div class="bd"><div class="hd"><strong>Tsukiji Outer Market</strong></div><span class="ds">O mercado externo de peixe, com bancas de comida de rua e restaurantes de sushi de balcão. Fica a uma caminhada de Ginza, entre 10 e 20 min dependendo da ponta do bairro. Ir cedo, porque as bancas boas esvaziam antes do meio-dia.</span></div></div>
 <div class="it"><div class="tm mono">11:00</div><div class="bd"><div class="hd"><strong>Checkout, malas guardadas no hotel</strong></div></div></div>
 <div class="it"><div class="tm mono">14:00</div><div class="bd"><div class="hd"><strong>Últimas compras em Ginza</strong><span class="st tbd">A definir</span></div><span class="ds">A pé do hotel, sem malas, e sem risco de atrasar o voo.</span></div></div></div>
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M17 3c-1.5 2-2 4-2 6.5 0 1.5.8 2.5 2 2.5v9"/></svg></span>Refeições</div>
@@ -517,13 +532,13 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 12.5 3 10.2l1.6-1.6 4.3.6 3-3-6.6-3.4L6.9 1l8.2 2.3 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6L20.2 14l-1.8 1.6-3.4-6.6-3 3 .6 4.3-1.6 1.6z"/></svg></span>Deslocamento</div>
 <div class="it"><div class="tm mono">17:00</div><div class="bd"><div class="hd"><strong>Pegar as malas no hotel</strong></div></div></div>
 <div class="it"><div class="tm mono">18:00</div><div class="bd"><div class="hd"><strong>Ginza para Narita</strong></div><span class="ds">Cerca de 1 h 15. Estar no aeroporto às 19:20.</span></div></div>
-<div class="it"><div class="tm mono">22:20</div><div class="bd"><div class="hd"><strong>EK319 · Narita T2 para Dubai T3</strong><span class="st ok">Confirmado</span></div><span class="ds">Chega 05:30 no horário de Dubai. 12 h 10 de voo.</span></div></div></div>
-<div class="warn"><b>O Tsukiji no dia 4 é aposta, não certeza.</b> A maioria das fontes indica que o mercado externo fecha no ano-novo e reabre por volta do dia 5, com cada banca decidindo por conta. Como fica a uma caminhada do hotel, o custo de tentar é baixo: se estiver fechado, vocês voltam para Ginza sem perder nada. Vale checar as redes do mercado alguns dias antes.</div></div></details>
+<div class="it"><div class="tm mono">22:20</div><div class="bd"><div class="hd"><strong>EK319 · Narita T2 para Dubai T3</strong><span class="st ok">Comprado</span></div><span class="ds">Chega 05:30 no horário de Dubai. 12 h 10 de voo.</span></div></div></div>
+<div class="warn"><b>O Tsukiji no dia 4 é aposta, não certeza.</b> A maioria das fontes indica que o mercado externo fecha no ano-novo e reabre por volta do dia 5, com cada banca decidindo por conta. Como fica a uma caminhada do hotel, o custo de tentar é baixo. Vale checar as redes do mercado alguns dias antes.</div></div></details>
 
 <details class="d tr mv" data-day="2027-01-05"><summary><div class="dn"><b class="mono">05</b><span>TER</span></div><div class="dm"><div class="dc">Chegada</div><div class="dt">Dubai para São Paulo</div></div><svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="db"><div class="blk"><div class="bl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.2 12.5 3 10.2l1.6-1.6 4.3.6 3-3-6.6-3.4L6.9 1l8.2 2.3 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6L20.2 14l-1.8 1.6-3.4-6.6-3 3 .6 4.3-1.6 1.6z"/></svg></span>Deslocamento</div>
 <div class="it"><div class="tm mono">05:30</div><div class="bd"><div class="hd"><strong>Conexão em Dubai, 3 h 35</strong></div></div></div>
-<div class="it"><div class="tm mono">09:05</div><div class="bd"><div class="hd"><strong>EK261 · Dubai T3 para Guarulhos T3</strong><span class="st ok">Confirmado</span></div><span class="ds">Chega 17:35 no horário de São Paulo. 15 h 30 de voo, o trecho mais longo da viagem.</span></div></div></div></div></details>
+<div class="it"><div class="tm mono">09:05</div><div class="bd"><div class="hd"><strong>EK261 · Dubai T3 para Guarulhos T3</strong><span class="st ok">Comprado</span></div><span class="ds">Chega 17:35 no horário de São Paulo. 15 h 30 de voo, o trecho mais longo da viagem.</span></div></div></div></div></details>
 
  </div>
 </section>
@@ -531,57 +546,77 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
 <!-- ═══ VOOS ═══ -->
 <section id="voos">
  <h2 class="h2">Voos e trem</h2>
- <p class="lede">Quatro trechos Emirates estão emitidos. Os outros quatro já têm voo e horário escolhidos, mas nenhum foi comprado.</p>
- <div class="grp">Emitido pela agência</div>
+ <p class="lede">Os sete voos da viagem estão comprados, com assentos escolhidos. Só o trem de Osaka para Tóquio ainda falta.</p>
 
- <div class="card rv"><div class="ct"><div class="cn">EK262</div><span class="st ok">Confirmado</span></div>
+ <div class="grp">Comprado · os sete voos, em ordem de viagem</div>
+
+ <div class="card rv"><div class="ct"><div class="cn">1 · EK262 · Emirates</div><span class="st ok">Comprado</span></div>
  <div class="rt"><div class="pt"><div class="cdx mono">GRU</div><div class="wh mono">22 dez · 01:30</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">DXB</div><div class="wh mono">22 dez · 22:35</div></div></div>
- <div class="mt">Guarulhos T3 para Dubai T3 · 14 h 05 · Airbus A380</div></div>
+ <div class="mt">Guarulhos T3 para Dubai T3 · 14 h 05 · Airbus A380 · tarifa ECOFLEX · 1 mala despachada por passageiro</div></div>
 
- <div class="card rv"><div class="ct"><div class="cn">EK384</div><span class="st ok">Confirmado</span></div>
+ <div class="card rv"><div class="ct"><div class="cn">2 · EK384 · Emirates</div><span class="st ok">Comprado</span></div>
  <div class="rt"><div class="pt"><div class="cdx mono">DXB</div><div class="wh mono">23 dez · 03:05</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">BKK</div><div class="wh mono">23 dez · 12:05</div></div></div>
  <div class="mt">Dubai T3 para Bangkok Suvarnabhumi · cerca de 6 h · Airbus A380</div><span class="tg">Conexão em Dubai: 4 h 30</span></div>
 
- <div class="card rv"><div class="ct"><div class="cn">EK319</div><span class="st ok">Confirmado</span></div>
+ <div class="card rv"><div class="ct"><div class="cn">3 · VZ306 · Thai VietJet</div><span class="st ok">Comprado</span></div>
+ <div class="rt"><div class="pt"><div class="cdx mono">BKK</div><div class="wh mono">23 dez · 15:25</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">HKT</div><div class="wh mono">23 dez · 17:00</div></div></div>
+ <div class="mt">Suvarnabhumi para Phuket · 1 h 35 · tarifa Deluxe<br>Localizador <b class="mono" style="color:var(--label)">A5BP2S</b> · Khafif 5C, Mansur 5B · 20 kg despachados inclusos</div>
+ <span class="tg">3 h 20 de folga depois da Emirates</span><span class="tg">Check-in online 24 h antes</span></div>
+
+ <div class="card rv"><div class="ct"><div class="cn">4 · VZ2305 · Thai VietJet</div><span class="st ok">Comprado</span></div>
+ <div class="rt"><div class="pt"><div class="cdx mono">HKT</div><div class="wh mono">27 dez · 19:35</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">BKK</div><div class="wh mono">27 dez · 21:05</div></div></div>
+ <div class="mt">Phuket para Suvarnabhumi · 1 h 30 · tarifa Deluxe<br>Mesma reserva da ida, localizador <b class="mono" style="color:var(--label)">A5BP2S</b> · Khafif 5C, Mansur 5B · 20 kg despachados inclusos</div>
+ <span class="tg">Sair de Patong às 16:30</span></div>
+
+ <div class="card rv"><div class="ct"><div class="cn">5 · VZ820 · Thai VietJet</div><span class="st ok">Comprado</span></div>
+ <div class="rt"><div class="pt"><div class="cdx mono">BKK</div><div class="wh mono">29 dez · 00:25</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">KIX</div><div class="wh mono">29 dez · 07:55</div></div></div>
+ <div class="mt">Suvarnabhumi para Osaka Kansai, Terminal 1 · 5 h 30, voo noturno · tarifa Deluxe<br>Localizador <b class="mono" style="color:var(--label)">WZH8ZP</b> · Khafif 4C, Mansur 4A · 20 kg despachados inclusos</div>
+ <span class="tg">Sai do hotel às 21:00 do dia 28</span><span class="tg">A noite do dia 28 é dentro do avião</span></div>
+
+ <div class="card rv"><div class="ct"><div class="cn">6 · EK319 · Emirates</div><span class="st ok">Comprado</span></div>
  <div class="rt"><div class="pt"><div class="cdx mono">NRT</div><div class="wh mono">4 jan · 22:20</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">DXB</div><div class="wh mono">5 jan · 05:30</div></div></div>
  <div class="mt">Tóquio Narita T2 para Dubai T3 · 12 h 10 · Airbus A380</div><span class="tg">Estar no aeroporto às 19:20</span></div>
 
- <div class="card rv"><div class="ct"><div class="cn">EK261</div><span class="st ok">Confirmado</span></div>
+ <div class="card rv"><div class="ct"><div class="cn">7 · EK261 · Emirates</div><span class="st ok">Comprado</span></div>
  <div class="rt"><div class="pt"><div class="cdx mono">DXB</div><div class="wh mono">5 jan · 09:05</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">GRU</div><div class="wh mono">5 jan · 17:35</div></div></div>
- <div class="mt">Dubai T3 para Guarulhos T3 · 15 h 30 · Airbus A380</div><span class="tg">Trecho mais longo</span></div>
+ <div class="mt">Dubai T3 para Guarulhos T3 · 15 h 30 · Airbus A380 · trecho mais longo da viagem</div></div>
 
- <div class="grp">Comprado e confirmado · Thai VietJet</div>
-
- <div class="card rv"><div class="ct"><div class="cn">VZ306 · Bangkok para Phuket</div><span class="st ok">Comprado</span></div>
- <div class="rt"><div class="pt"><div class="cdx mono">BKK</div><div class="wh mono">23 dez · 15:25</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">HKT</div><div class="wh mono">23 dez · 17:00</div></div></div>
- <div class="mt">Thai VietJet Air · tarifa Deluxe · direto · 1 h 35 · sai do próprio Suvarnabhumi, sem troca de aeroporto.<br><br>Localizador <b class="mono" style="color:var(--label)">A5BP2S</b> · Khafif 5C, Mansur 5B · 20 kg despachados inclusos, mais prioridade de embarque e alteração sem multa.</div>
- <span class="tg">3 h 20 de folga depois da Emirates</span><span class="tg">Check-in online 24 h antes</span></div>
-
- <div class="card rv"><div class="ct"><div class="cn">VZ2305 · Phuket para Bangkok</div><span class="st ok">Comprado</span></div>
- <div class="rt"><div class="pt"><div class="cdx mono">HKT</div><div class="wh mono">27 dez · 19:35</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">BKK</div><div class="wh mono">27 dez · 21:05</div></div></div>
- <div class="mt">Thai VietJet Air · tarifa Deluxe · direto · 1 h 30 · pousa em Suvarnabhumi, o mesmo aeroporto de onde vocês embarcam no dia seguinte.<br><br>Mesma reserva da ida, localizador <b class="mono" style="color:var(--label)">A5BP2S</b> · Khafif 5C, Mansur 5B · 20 kg despachados inclusos.<br><br><b style="color:var(--label);font-weight:620">Os dois trechos juntos saíram por US$ 456,68, cerca de R$ 2.343 pelos dois, ou R$ 1.171 por pessoa.</b></div>
- <span class="tg">Sair de Patong às 16:30</span><span class="tg">Pago em 10 set 2026</span></div>
-
- <div class="card rv"><div class="ct"><div class="cn">VZ820 · Bangkok para Osaka</div><span class="st ok">Comprado</span></div>
- <div class="rt"><div class="pt"><div class="cdx mono">BKK</div><div class="wh mono">29 dez · 00:25</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono">KIX</div><div class="wh mono">29 dez · 07:55</div></div></div>
- <div class="mt">Thai VietJet · tarifa Deluxe · 5 h 30, durante a noite · chega no Terminal 1 de Kansai.<br><br>Localizador <b class="mono" style="color:var(--label)">WZH8ZP</b> · Khafif 4C, Mansur 4A · 20 kg despachados inclusos.<br><br><b style="color:var(--label);font-weight:620">US$ 1.135,16 pelos dois, cerca de R$ 5.823, ou R$ 2.912 por pessoa.</b> É o trecho interno mais caro da viagem, e ficou acima da estimativa inicial de R$ 2.400.</div>
- <span class="tg">Sai do hotel às 21:00 do dia 28</span><span class="tg">A noite do dia 28 é dentro do avião</span><span class="tg">Pago em 10 set 2026</span></div>
-
- <div class="grp">Único trecho que falta comprar</div>
+ <div class="grp">Falta comprar · único trecho</div>
  <div class="card ghost rv"><div class="ct"><div class="cn">Shinkansen Shin-Osaka para Tóquio</div><span class="st buy">A comprar</span></div>
  <div class="rt"><div class="pt"><div class="cdx mono" style="font-size:17px">Shin-Osaka</div><div class="wh mono">1 jan · 07:00</div></div><div class="ar"><svg viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h20M16 3l5 5-5 5"/></svg></div><div class="pt r"><div class="cdx mono" style="font-size:17px">Tóquio</div><div class="wh mono">chegada<br>~09:30</div></div></div>
- <div class="mt">Nozomi, cerca de 2 h 30. A reserva abre em 1º de dezembro às 10:00 do horário do Japão. Reservar também o assento com espaço para bagagem grande, se a mala passar de 160 cm somando as três dimensões.<br><br><b style="color:var(--label);font-weight:620">Cerca de R$ 490 por pessoa · R$ 980 pelos dois.</b> São aproximadamente 14.700 ienes de bilhete com assento reservado, convertidos à taxa do dia.</div></div>
+ <div class="mt">Nozomi, cerca de 2 h 30. A reserva abre em 1º de dezembro às 10:00 do horário do Japão. Reservar também o assento com espaço para bagagem grande, se a mala passar de 160 cm somando as três dimensões.</div>
+ <span class="tg">Reserva abre 1º de dezembro</span></div>
 
- <div class="grp">Quanto custaram os trechos internos</div>
- <div class="card rv">
-  <div class="pz" style="grid-template-columns:repeat(2,1fr)">
-   <div class="pzi"><div class="k2">Já pago · 3 voos VietJet</div><div class="v2">R$ 8.166</div><div class="u2">US$ 1.591,84</div></div>
-   <div class="pzi"><div class="k2">Por pessoa</div><div class="v2">R$ 4.083</div><div class="u2">US$ 796</div></div>
-   <div class="pzi"><div class="k2">Falta · Shinkansen</div><div class="v2">R$ 980</div><div class="u2">US$ 191</div></div>
-   <div class="pzi"><div class="k2">Total com o trem</div><div class="v2">R$ 9.146</div><div class="u2">US$ 1.783</div></div>
-  </div>
-  <div class="mt" style="margin-top:14px">A5BP2S, os dois trechos de Phuket, saiu por US$ 456,68. WZH8ZP, o voo para Osaka, saiu por US$ 1.135,16. Os dois foram pagos em 10 de setembro de 2026.<br><br><b style="color:var(--label);font-weight:620">A tarifa Deluxe inclui 20 kg despachados nos três trechos</b>, mais prioridade de embarque e alteração sem multa. Não há bagagem a comprar depois.<br><br>Somando a Emirates, que saiu por R$ 15.008 por pessoa, o transporte da viagem fecha em cerca de <b style="color:var(--label);font-weight:620">R$ 19.580 por pessoa</b>.</div>
+ <div class="grp">Localizadores</div>
+ <div class="card pad0 rv">
+  <div class="kv"><div class="kk">Emirates · 4 trechos</div><div class="vv mono">EK262 · EK384 · EK319 · EK261</div></div>
+  <div class="kv"><div class="kk">VietJet · Phuket, ida e volta</div><div class="vv"><b class="mono">A5BP2S</b> · VZ306 e VZ2305</div></div>
+  <div class="kv"><div class="kk">VietJet · Bangkok para Osaka</div><div class="vv"><b class="mono">WZH8ZP</b> · VZ820</div></div>
+  <div class="kv"><div class="kk">Check-in online</div><div class="vv">VietJet abre 24 h antes de cada voo, em vietjetair.com. Os dois passageiros estão na mesma reserva nos dois localizadores.</div></div>
  </div>
+</section>
+
+<!-- ═══ HOTÉIS ═══ -->
+<section id="hoteis">
+ <h2 class="h2">Hotéis</h2>
+ <p class="lede">Onze noites em hotel e duas dentro de avião. Osaka e Tóquio estão reservados, Phuket está escolhido e Bangkok ainda não existe.</p>
+
+ <div class="card ghost rv"><div class="ct"><div class="cn">Mövenpick Myth Hotel Patong</div><span class="st buy">Falta reservar</span></div>
+ <div class="mt">Rat U-thit Soi 2 200 Pee Road, Patong, Kathu, 83150<br>Check-in 23 dez · Checkout 27 dez · 4 noites<br>Chabad de Phuket na mesma via, a pé. Praia de Patong e Bangla Road a poucos minutos.</div>
+ <span class="tg">Guardar malas no dia 27</span></div>
+
+ <div class="card ghost rv"><div class="ct"><div class="cn">Bangkok</div><span class="st tbd">A definir</span></div>
+ <div class="mt">Check-in 27 dez, por volta das 22:00 · Checkout 28 dez · 1 noite<br>Chegada e saída são as duas em Suvarnabhumi. Perto do BTS ou do Airport Rail Link ajuda nas duas pontas.</div>
+ <span class="tg">Guardar malas o dia 28 inteiro</span></div>
+
+ <div class="card rv"><div class="ct"><div class="cn">Hotel Vista Osaka Namba</div><span class="st ok">Reservado</span></div>
+ <div class="mt">Chuo-ku Suemoncho 1-1, Osaka · <a href="tel:+81647085519" class="mono">+81 6-4708-5519</a><br>Check-in 29 dez, das 15:00 à meia-noite · Checkout 1º jan, até as 11:00 · 3 noites<br>Em Namba, dentro da área de Dotonbori e Shinsaibashi. Linha Midosuji direto até Shin-Osaka.</div>
+ <span class="tg">Guarda-volumes na manhã do dia 29</span></div>
+
+ <div class="card rv"><div class="ct"><div class="cn">Agora Tokyo Ginza</div><span class="st ok">Reservado</span></div>
+ <div class="mt">Ginza, Tóquio · quarto superior com 2 camas de solteiro, 16 m²<br>Check-in 1º jan · Checkout 4 jan · 3 noites<br>A pé das lojas de Ginza e do Tsukiji. Perto da estação de Tóquio, onde chega o Shinkansen.</div>
+ <div class="warn"><b>Pagamento vence em 30 de novembro.</b> Cancelamento grátis até 2 de dezembro, então até lá dá para trocar sem custo. E 16 m² para dois com malas grandes é apertado, mesmo para padrão japonês.</div>
+ <span class="tg">Preencher o endereço pelo voucher</span></div>
 </section>
 
 <!-- ═══ TRANSFERS ═══ -->
@@ -612,88 +647,15 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
   <div class="tf"><div class="tfd">1 JAN</div><div class="tfb"><div class="tfr">Estação de Tóquio para o Agora Tokyo Ginza</div><div class="tfm">Uma parada de metrô ou uma caminhada curta com as malas.</div><span class="tft">~10 min</span></div></div>
   <div class="tf"><div class="tfd">1 JAN</div><div class="tfb"><div class="tfr">Ginza para Asakusa, ida e volta</div><div class="tfm">Metrô direto. Voltar às 15:30 para chegar antes do Shabat, que entra às 16:20.</div><span class="tft">~20 min por trecho</span></div></div>
   <div class="tf"><div class="tfd">3 JAN</div><div class="tfb"><div class="tfr">Ginza para Toyosu, teamLab Planets</div><div class="tfm">Metrô até a região da baía de Tóquio.</div><span class="tft">~25 min</span></div></div>
-  <div class="tf"><div class="tfd">4 JAN</div><div class="tfb"><div class="tfr">Hotel para o Tsukiji Outer Market</div><div class="tfm">A pé, saindo de Ginza em direção ao rio. Não precisa de transporte. Confirme a distância exata pelo endereço do voucher.</div><span class="tft">10 a 20 min a pé</span></div></div>
+  <div class="tf"><div class="tfd">4 JAN</div><div class="tfb"><div class="tfr">Hotel para o Tsukiji Outer Market</div><div class="tfm">A pé, saindo de Ginza em direção ao rio. Não precisa de transporte.</div><span class="tft">10 a 20 min a pé</span></div></div>
   <div class="tf"><div class="tfd">4 JAN</div><div class="tfb"><div class="tfr">Ginza para o aeroporto de Narita</div><div class="tfm">Narita Express ou Skyliner. Pegar as malas no hotel às 17:00, sair às 18:00 e estar no aeroporto às 19:20.</div><span class="tft">~1 h 15</span></div></div>
  </div>
 </section>
 
-<!-- ═══ HOTÉIS ═══ -->
-<section id="hoteis">
- <h2 class="h2">Hotéis</h2>
- <p class="lede">Onze noites em hotel e duas dentro de avião. Osaka e Tóquio já estão reservadas, Phuket está escolhida e Bangkok ainda não existe. Nenhuma foi paga. Valores convertidos à taxa de 1 dólar igual a 5,13 reais, e sempre para o quarto inteiro, com os dois hóspedes.</p>
-
- <div class="card rv"><div class="ct"><div class="cn">Mövenpick Myth Hotel Patong Phuket</div><span class="st buy">A comprar</span></div>
- <div class="mt"><b style="color:var(--label);font-weight:620">Rat U-thit Soi 2 200 Pee Road, Patong, Kathu, 83150</b><br>5 estrelas · nota 8,6 em 1.987 avaliações<br>Check-in 23 dez · Checkout 27 dez · 4 noites · 1 quarto, 2 adultos</div>
- <div class="pz">
-  <div class="pzi"><div class="k2">Total</div><div class="v2">R$ 4.500</div><div class="u2">US$ 877</div></div>
-  <div class="pzi"><div class="k2">Por noite</div><div class="v2">R$ 1.125</div><div class="u2">US$ 219</div></div>
- </div>
- <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">Localização:</b> é o ponto mais bem resolvido da viagem. Fica na Rat-U-Thit 200 Pee Road, a mesma via do Chabad de Phuket, o que resolve as duas refeições de Shabat a pé. Está a poucos minutos da praia de Patong e da Bangla Road, que é a rua de bares do dia 26. O Andamanda e a pista de kart ficam a 15 min de carro, subindo para Kathu.</div>
- <span class="tg">Escolhido, não reservado</span><span class="tg">Chabad na mesma rua</span><span class="tg">Guardar malas no dia 27</span></div>
-
- <div class="card ghost rv"><div class="ct"><div class="cn">Bangkok</div><span class="st tbd">A definir</span></div>
- <div class="mt">Check-in 27 dez, por volta das 23:00 · Checkout 28 dez · 1 noite<br>Nenhum hotel escolhido, nenhum valor estimado</div>
- <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">O que a localização precisa atender:</b> chegada e saída são as duas em <b>Suvarnabhumi</b>, então basta um acesso bom para lá. A região do rio ou do centro histórico encurta a manhã de templos do dia 28 e o trajeto para o ICONSIAM. Ficar perto de uma estação do BTS ou do Airport Rail Link ajuda nas duas pontas.</div>
- <span class="tg">Perto do BTS</span><span class="tg">Guardar malas o dia 28 inteiro</span></div>
-
- <div class="card rv"><div class="ct"><div class="cn">Hotel Vista Osaka Namba</div><span class="st ok">Reservado</span></div>
- <div class="mt"><b style="color:var(--label);font-weight:620">Chuo-ku Suemoncho 1-1, Osaka</b><br>3 estrelas · telefone +81 6-4708-5519<br>Check-in 29 dez, das 15:00 à meia-noite · Checkout 1º jan, até as 11:00 · 3 noites</div>
- <div class="pz">
-  <div class="pzi"><div class="k2">Total, 3 noites</div><div class="v2">a confirmar</div><div class="u2">—</div></div>
-  <div class="pzi"><div class="k2">Por noite</div><div class="v2">a confirmar</div><div class="u2">—</div></div>
- </div>
- <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">Localização:</b> Suemoncho fica em Namba, dentro da região do canal de Dotonbori e da galeria de Shinsaibashi, que são o programa das noites dos dias 29 e 30 e o dia de compras do 31. A estação de Namba fica ali, e a linha Midosuji vai de Namba até Shin-Osaka sem baldeação, o que resolve o trem das 07:00 do dia 1º em cerca de 17 min.</div>
- <div class="warn"><b>Falta o valor desta reserva.</b> Os R$ 2.400 que estavam aqui eram do Hiyori Flex, que era outro hotel. Assim que sair a cobrança da Booking, me passa o número para eu fechar a conta de hospedagem.<br><br><b>E o checkout do dia 1º é às 11:00,</b> enquanto vocês saem do hotel às 06:15 para o trem. Sem conflito, mas confirme que a recepção opera nesse horário para devolver algo, se precisarem.</div>
- <span class="tg">Reservado e confirmado</span><span class="tg">Cartão cobrado automaticamente</span><span class="tg">Check-in a partir das 15:00</span></div>
-
- <div class="card rv"><div class="ct"><div class="cn">Agora Tokyo Ginza</div><span class="st buy">Reservado, falta pagar</span></div>
- <div class="mt"><b style="color:var(--label);font-weight:620">Ginza, Tóquio</b><br>Quarto Superior com 2 camas de solteiro, não fumantes · 16 m²<br>Check-in 1º jan, com chegada às 10:15 · Checkout 4 jan · 3 noites<br>WiFi grátis · ar-condicionado · banheiro no quarto · café da manhã pago à parte, na acomodação</div>
- <div class="pz">
-  <div class="pzi"><div class="k2">Total, 3 diárias</div><div class="v2">R$ 3.775</div><div class="u2">US$ 736</div></div>
-  <div class="pzi"><div class="k2">Por noite</div><div class="v2">R$ 1.258</div><div class="u2">US$ 245</div></div>
-  <div class="pzi"><div class="k2">Por pessoa, total</div><div class="v2">R$ 1.888</div><div class="u2">US$ 368</div></div>
-  <div class="pzi"><div class="k2">Preço de tabela</div><div class="v2">R$ 5.447</div><div class="u2">economia de R$ 1.672</div></div>
- </div>
- <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">Reservado, sem pagamento.</b> Nada a pagar até 30 de novembro e cancelamento grátis até 2 de dezembro de 2026. Na prática vocês têm até o fim de novembro para trocar de ideia sem custo, então vale reservar também uma segunda opção e decidir mais perto da data.</div>
- <div class="mt" style="margin-top:14px"><b style="color:var(--label);font-weight:620">Localização:</b> fica em Ginza, o que resolve três coisas do roteiro: as lojas do bairro são o bloco de compras da noite do dia 2, a pé; a estação de Tóquio fica pertinho, o que recebe bem a chegada do Shinkansen no dia 1º; e o Tsukiji Outer Market do dia 4 é caminhada, entre 10 e 20 min dependendo de qual ponta de Ginza o hotel está. <b>Confirme o endereço exato no voucher</b> e meça essa distância antes de fechar o dia 4.</div>
- <div class="warn"><b>16 m² para dois é apertado.</b> É pequeno mesmo para o padrão japonês, e vocês chegam com duas malas grandes e compras de Osaka. Com as duas malas abertas sobra pouco chão. Como o cancelamento é grátis até 2 de dezembro, dá para procurar algo maior sem perder nada.</div>
- <span class="tg">Reservado, não pago</span><span class="tg">2 camas de solteiro</span><span class="tg">Cancelamento grátis até 2 dez</span></div>
-
- <div class="grp">Somando o que já tem preço</div>
- <div class="card rv">
-  <div class="pz" style="grid-template-columns:repeat(2,1fr)">
-   <div class="pzi"><div class="k2">Com preço fechado · 7 noites</div><div class="v2">R$ 8.275</div><div class="u2">US$ 1.613</div></div>
-   <div class="pzi"><div class="k2">Média por noite</div><div class="v2">R$ 1.182</div><div class="u2">US$ 230</div></div>
-   <div class="pzi"><div class="k2">Por pessoa, total</div><div class="v2">R$ 4.138</div><div class="u2">US$ 807</div></div>
-   <div class="pzi"><div class="k2">Por pessoa, por noite</div><div class="v2">R$ 591</div><div class="u2">US$ 115</div></div>
-  </div>
-  <div class="mt" style="margin-top:14px">Phuket R$ 4.500 em 4 noites e Tóquio R$ 3.775 em 3 noites. Faltam duas coisas: o valor da reserva do Hotel Vista Osaka Namba, que já está confirmada mas ainda sem cobrança, e a noite de Bangkok, que ainda não tem hotel.<br><br>Com Osaka em torno de R$ 2.500 e Bangkok em torno de R$ 700, o total de hospedagem deve fechar perto de <b style="color:var(--label);font-weight:620">R$ 11.500</b>, ou R$ 5.750 por pessoa.</div>
- </div>
-</section>
-
-<!-- ═══ COMPRAR ═══ -->
+<!-- ═══ PASSEIOS E PENDÊNCIAS ═══ -->
 <section id="comprar">
- <h2 class="h2">Falta comprar</h2>
- <p class="lede">Tudo em vermelho ainda não foi pago. Use os filtros no topo para ver só um tipo.</p>
-
- <div class="card red rv">
-  <div class="ct"><div class="cn" style="color:var(--urg)">Comprar antes de tudo</div></div>
-  <div class="mt" style="color:var(--label)">Os três voos internos já foram pagos e Osaka e Tóquio já estão reservados. Sobraram quatro coisas travando o roteiro.</div>
-  <div class="mt" style="margin-top:12px">
-   <b style="color:var(--urg)">1.</b> Hotel em Bangkok, 27 a 28 dez · única noite da viagem ainda sem hotel escolhido<br>
-   <b style="color:var(--urg)">2.</b> Ingresso da Universal Studios com Express Pass, 30 dez · ingresso por data em feriado nacional<br>
-   <b style="color:var(--urg)">3.</b> Mövenpick Patong, 23 a 27 dez · escolhido, só falta apertar reservar<br>
-   <b style="color:var(--urg)">4.</b> Pagamento do Agora Tokyo Ginza · vence em 30 de novembro
-  </div>
- </div>
-
- <div class="card pad0 rv"><div class="gh">Hospedagem</div>
- <div class="li"><span class="st buy"></span><div class="lw">Hotel em Bangkok<span>27 a 28 dez · 1 noite · nenhum escolhido</span></div></div>
- <div class="li"><span class="st buy"></span><div class="lw">Mövenpick Myth Patong<span>23 a 27 dez · 4 noites · R$ 4.500 · escolhido, falta reservar</span></div></div>
- <div class="li"><span class="st buy"></span><div class="lw">Agora Tokyo Ginza<span>1º a 4 jan · 3 noites · R$ 3.775 · já reservado, pagar até 30 de novembro</span></div></div></div>
-
- <div class="card pad0 rv"><div class="gh">Transporte</div>
- <div class="li"><span class="st buy"></span><div class="lw">Shinkansen Shin-Osaka para Tóquio<span>1º jan 07:00 · ~R$ 490 por pessoa · a reserva abre 1º dez às 10:00 do Japão · é o único trecho que ainda falta</span></div></div></div>
+ <h2 class="h2">Passeios e pendências</h2>
+ <p class="lede">Passeios, refeições e documentos. Transporte e hospedagem estão na primeira seção.</p>
 
  <div class="card pad0 rv"><div class="gh">Passeios na Tailândia</div>
  <div class="li"><span class="st buy"></span><div class="lw">Passeio de barco Phi Phi<span>24 dez · dia inteiro</span></div></div>
@@ -704,7 +666,7 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
  <div class="li"><span class="st buy"></span><div class="lw">Luta de Muay Thai<span>28 dez · só se começar até 18:00 · provavelmente Rajadamnern</span></div></div></div>
 
  <div class="card pad0 rv"><div class="gh">Passeios no Japão</div>
- <div class="li"><span class="st buy"></span><div class="lw">Universal Studios Japan e Express Pass<span>30 dez · ingresso por data, feriado nacional em pico</span></div></div>
+ <div class="li"><span class="st buy"></span><div class="lw">Universal Studios Japan e Express Pass<span>30 dez · ingresso por data, feriado nacional em pico · é o mais urgente da lista</span></div></div>
  <div class="li"><span class="st buy"></span><div class="lw">Osaka Aquarium Kaiyukan<span>29 dez · tarde</span></div></div>
  <div class="li"><span class="st buy"></span><div class="lw">teamLab Botanical Garden Osaka<span>29 dez · sessão noturna</span></div></div>
  <div class="li"><span class="st buy"></span><div class="lw">Almoço em sushi de qualidade em Osaka<span>31 dez · último dia antes do feriado fechar as casas boas</span></div></div>
@@ -717,7 +679,7 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
  <div class="li"><span class="st tbd"></span><div class="lw">Linha B do dia 25<span>centrinho de Patong, Lion Café e pista de kart · alternativa ao Andamanda</span></div></div>
  <div class="li"><span class="st tbd"></span><div class="lw">Massagem em Patong<span>26 dez · não precisa reservar</span></div></div>
  <div class="li"><span class="st tbd"></span><div class="lw">Rooftop em Bangkok<span>28 dez 16:30 · dress code sem bermuda</span></div></div>
- <div class="li"><span class="st tbd"></span><div class="lw">Kart de rua em Tóquio<span>saiu da noite do dia 2 e ainda não tem novo horário · exigiria Permissão Internacional para Dirigir</span></div></div>
+ <div class="li"><span class="st tbd"></span><div class="lw">Kart de rua em Tóquio<span>sem horário definido · exigiria Permissão Internacional para Dirigir</span></div></div>
  <div class="li"><span class="st tbd"></span><div class="lw">Festa de virada em Osaka<span>31 dez · com os amigos locais</span></div></div>
  <div class="li"><span class="st tbd"></span><div class="lw">Restaurantes de jantar<span>quase todos os dias · no Japão, sempre sushi</span></div></div></div>
 
@@ -733,14 +695,12 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
  <h2 class="h2">Essencial</h2>
  <p class="lede">O que você precisa achar rápido em aeroporto, táxi ou recepção.</p>
 
- <div class="grp">Passagem aérea</div>
+ <div class="grp">Reservas</div>
  <div class="card pad0 rv">
-  <div class="kv"><div class="kk">Companhia</div><div class="vv">Emirates</div></div>
   <div class="kv"><div class="kk">Passageiros</div><div class="vv">Michel Menahem Khafif e Michel Mansur</div></div>
-  <div class="kv"><div class="kk">Trechos</div><div class="vv mono">EK262 · EK384 · EK319 · EK261</div></div>
-  <div class="kv"><div class="kk">VietJet · localizadores</div><div class="vv"><b class="mono">A5BP2S</b> para VZ306 e VZ2305, os dois trechos de Phuket<br><b class="mono">WZH8ZP</b> para VZ820, Bangkok a Osaka<br>Os dois passageiros estão na mesma reserva em ambos. Check-in online abre 24 h antes de cada voo, em vietjetair.com</div></div>
-  <div class="kv"><div class="kk">Família tarifária</div><div class="vv">ECOFLEX, permite alteração conforme as regras da tarifa</div></div>
-  <div class="kv"><div class="kk">Bagagem</div><div class="vv">Emirates: 1 mala despachada por passageiro, mais mão e mochila.<br>VietJet, tarifa Deluxe: 20 kg despachados inclusos nos três trechos, mais prioridade de embarque e alteração sem multa.</div></div>
+  <div class="kv"><div class="kk">Emirates</div><div class="vv mono">EK262 · EK384 · EK319 · EK261</div></div>
+  <div class="kv"><div class="kk">VietJet</div><div class="vv"><b class="mono">A5BP2S</b> para VZ306 e VZ2305<br><b class="mono">WZH8ZP</b> para VZ820</div></div>
+  <div class="kv"><div class="kk">Bagagem</div><div class="vv">Emirates: 1 mala despachada por passageiro, mais mão e mochila.<br>VietJet Deluxe: 20 kg despachados inclusos nos três trechos, mais prioridade de embarque e alteração sem multa.</div></div>
  </div>
 
  <div class="grp">Agência</div>
@@ -751,12 +711,12 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
   <div class="kv"><div class="kk">E-mail</div><div class="vv"><a href="mailto:atendimento.sc@sakuratur.com.br">atendimento.sc@sakuratur.com.br</a></div></div>
  </div>
 
- <div class="grp">Endereços dos hotéis</div>
+ <div class="grp">Endereços</div>
  <div class="card pad0 rv">
   <div class="kv"><div class="kk">Phuket</div><div class="vv">Mövenpick Myth Hotel Patong · Rat U-thit Soi 2 200 Pee Road, Patong, Kathu, 83150</div></div>
   <div class="kv"><div class="kk">Bangkok</div><div class="vv">A definir</div></div>
   <div class="kv"><div class="kk">Osaka</div><div class="vv">Hotel Vista Osaka Namba · Chuo-ku Suemoncho 1-1 · <a href="tel:+81647085519" class="mono">+81 6-4708-5519</a></div></div>
-  <div class="kv"><div class="kk">Tóquio</div><div class="vv">Agora Tokyo Ginza · Ginza, Chuo-ku · preencher o endereço exato pelo voucher da reserva</div></div>
+  <div class="kv"><div class="kk">Tóquio</div><div class="vv">Agora Tokyo Ginza · Ginza, Chuo-ku · preencher o endereço exato pelo voucher</div></div>
   <div class="kv"><div class="kk">Chabad Phuket</div><div class="vv">Rat-U-Thit 200 Pee Rd, Patong, Kathu · mesma via do Mövenpick</div></div>
   <div class="kv"><div class="kk">Chabad Tóquio</div><div class="vv">Região de Hiroo e Minami-Azabu · entrega refeições em qualquer lugar da cidade, com pedido antecipado</div></div>
  </div>
@@ -781,13 +741,12 @@ table.sh td{padding:10px 8px 10px 0;border-top:.5px solid var(--sep);vertical-al
  <div class="grp">Comer no Japão no ano-novo</div>
  <div class="card rv"><div class="mt">De 30 de dezembro a 3 de janeiro é o feriado mais longo do ano no Japão, e é quando restaurante independente fecha, inclusive a maior parte dos balcões de sushi.<br><br>Como todas as refeições no Japão vão ser sushi, isso vira um calendário: <b style="color:var(--label);font-weight:620">o último dia de sushi bom em Osaka é 31 de dezembro</b>, e <b style="color:var(--label);font-weight:620">as casas boas de Tóquio só voltam a partir do dia 3</b>. Nos dias 30, 1º e 2, contem com redes de esteira como Sushiro, Kura e Genki, com os subsolos gastronômicos das lojas de departamento de Ginza, e com a comida do Chabad no dia 1º.</div></div>
 
- <div class="grp">Fusos e câmbio</div>
+ <div class="grp">Fusos horários</div>
  <div class="card pad0 rv">
   <div class="kv"><div class="kk">São Paulo</div><div class="vv mono">UTC−3</div></div>
   <div class="kv"><div class="kk">Dubai</div><div class="vv">7 h à frente de São Paulo</div></div>
   <div class="kv"><div class="kk">Tailândia</div><div class="vv">10 h à frente de São Paulo</div></div>
   <div class="kv"><div class="kk">Japão</div><div class="vv">12 h à frente de São Paulo</div></div>
-  <div class="kv"><div class="kk">Câmbio usado</div><div class="vv">1 dólar igual a 5,13 reais. Todos os valores em dólar deste documento saem dessa taxa, que muda todo dia.</div></div>
  </div>
 </section>
 
@@ -861,41 +820,13 @@ function clocks(){
 }
 clocks();setInterval(clocks,20000);
 
-var CMAP={tr:'var(--tr)',th:'var(--th)',jp:'var(--jp)'};
-var VAL=[
- ['23','th',.25,'chegada 19h'],['24','th',1,''],['25','th',1,''],['26','th',.75,'Shabat'],
- ['27','th',.75,'voo 20h40'],['28','th',1,''],['29','jp',.75,'voo noturno'],['30','jp',1,''],['31','jp',1,''],
- ['1','jp',.5,'trem + Shabat'],['2','jp',.75,'Shabat'],['3','jp',1,''],['4','jp',.5,'até 17h']
-];
-var bs='',bw=34,base=176,mx=112,x0=40,stp=48;
-[1,.75,.5,.25].forEach(function(v){
-  var y=base-v*mx;
-  bs+='<line x1="26" y1="'+y+'" x2="676" y2="'+y+'" stroke="var(--sep)" stroke-width="1" stroke-dasharray="2 5"/>';
-  bs+='<text x="20" y="'+(y+4)+'" font-size="10" text-anchor="end" fill="var(--label3)">'+v.toFixed(2).replace('.',',')+'</text>';
-});
-VAL.forEach(function(d,i){
-  var x=x0+i*stp,h=d[2]*mx,y=base-h;
-  bs+='<rect x="'+x+'" y="'+(base-mx)+'" width="'+bw+'" height="'+mx+'" rx="6" fill="var(--fill3)" opacity=".55"/>';
-  bs+='<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+h+'" rx="6" fill="'+CMAP[d[1]]+'"/>';
-  if(d[2]<1)bs+='<text x="'+(x+bw/2)+'" y="'+(y-7)+'" font-size="10.5" font-weight="700" text-anchor="middle" fill="var(--label2)">'+d[2].toFixed(2).replace('.',',')+'</text>';
-  bs+='<text x="'+(x+bw/2)+'" y="196" font-size="12" font-weight="640" text-anchor="middle" fill="var(--label)">'+d[0]+'</text>';
-  if(d[3])bs+='<text x="'+(x+bw/2)+'" y="212" font-size="8.5" text-anchor="middle" fill="var(--label3)" transform="rotate(-38 '+(x+bw/2)+' 212)">'+d[3]+'</text>';
-});
-bs+='<text x="196" y="232" font-size="10" text-anchor="middle" fill="var(--label3)">DEZEMBRO</text>';
-bs+='<text x="556" y="232" font-size="10" text-anchor="middle" fill="var(--label3)">JANEIRO</text>';
-$('#bars').innerHTML=bs;
-
-var CITY=[['Phuket','3,75','5 dias','th'],['Bangkok','1,00','1 dia','th'],['Osaka','2,75','3 dias','jp'],['Tóquio','2,75','4 dias','jp']];
-$('#cty').innerHTML=CITY.map(function(c){
-  return '<div class="cx"><i style="background:'+CMAP[c[3]]+'"></i><span><b>'+c[1]+'</b><br>'+c[0]+'<em>de '+c[2]+' presentes</em></span></div>';
-}).join('');
-
-var RT=[['GRU',1],['DXB',1],['BKK',1],['HKT',0],['BKK',0],['KIX',0],['TYO',0],['DXB',1],['GRU',1]];
+/* sequência: tudo comprado menos a chegada em Tóquio, que depende do trem */
+var RT=[['GRU',1],['DXB',1],['BKK',1],['HKT',1],['BKK',1],['KIX',1],['TYO',0],['DXB',1],['GRU',1]];
 var dd='',nd='';
 RT.forEach(function(r,i){
   var x=38+i*78,y=76;
   if(i>0){var px=38+(i-1)*78;dd+='M'+px+' '+y+'Q'+((px+x)/2)+' '+(y-30)+' '+x+' '+y}
-  nd+='<circle cx="'+x+'" cy="'+y+'" r="6" fill="'+(r[1]?'var(--label)':'var(--fill3)')+'" stroke="var(--bg)" stroke-width="2"/>';
+  nd+='<circle cx="'+x+'" cy="'+y+'" r="6" fill="'+(r[1]?'var(--gold)':'var(--fill3)')+'" stroke="var(--bg)" stroke-width="2"/>';
   nd+='<text x="'+x+'" y="'+(y+24)+'" font-size="11.5" font-weight="640" text-anchor="middle" fill="'+(r[1]?'var(--label)':'var(--label3)')+'">'+r[0]+'</text>';
 });
 $('#rp').setAttribute('d',dd);$('#nodes').innerHTML=nd;
@@ -940,7 +871,7 @@ function apply(){
   });
   var filt=q||F!=='all';
   $$('section').forEach(function(s){
-    if(s.id==='painel'||s.id==='transfers'){s.classList.toggle('hide',!!filt);return}
+    if(s.id==='painel'||s.id==='transfers'||s.id==='pendencias'){s.classList.toggle('hide',!!filt);return}
     var vis=$$('details.d, .card',s).some(function(e){return !e.classList.contains('hide')});
     s.classList.toggle('hide',filt&&!vis);
   });
